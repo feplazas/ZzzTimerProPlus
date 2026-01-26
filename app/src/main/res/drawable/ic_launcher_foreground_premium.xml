@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background Circle Glow -->
+    <path
+        android:fillColor="#1A64D2FF"
+        android:pathData="M54,20A34,34 0,1 1,20 54A34,34 0,0 1,54 20"/>
+    
+    <!-- Elegant Crescent Moon -->
+    <path
+        android:fillColor="#64D2FF"
+        android:pathData="M68,34 C62,34 56,40 56,54 C56,68 62,74 68,74 C56,74 46,66 46,54 C46,42 56,34 68,34 Z"/>
+        
+    <!-- Subtle Inner Highlight on Moon -->
+    <path
+        android:fillColor="#8EDFFF"
+        android:pathData="M63,42 C60,42 57,46 57,54 C57,62 60,66 63,66 C58,66 54,61 54,54 C54,47 58,42 63,42 Z"/>
+    
+    <!-- Sleeping "Zzz" - Minimalist -->
+    <path
+        android:fillColor="#FFD60A"
+        android:strokeWidth="0"
+        android:pathData="M38,44 L46,44 L38,54 L46,54"/>
+    <path
+        android:fillColor="#FFD60A"
+        android:strokeWidth="2"
+        android:strokeColor="#FFD60A"
+        android:strokeLineCap="round"
+        android:pathData="M38,44 L46,44 L38,54 L46,54"/>
+        
+    <!-- Small Z -->
+    <path
+        android:fillColor="#FFD60A"  
+        android:strokeWidth="1.5"
+        android:strokeColor="#FFD60A"
+        android:strokeLineCap="round"
+        android:pathData="M32,38 L38,38 L32,45 L38,45"/>
+    
+    <!-- Decorative Stars -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M76,38 L77,41 L80,42 L77,43 L76,46 L75,43 L72,42 L75,41 Z"/>
+    
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.7"
+        android:pathData="M82,52 L82.5,54 L84.5,54.5 L82.5,55 L82,57 L81.5,55 L79.5,54.5 L81.5,54 Z"/>
+    
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.5"
+        android:pathData="M72,62 L72.3,63 L73.3,63.3 L72.3,63.6 L72,64.6 L71.7,63.6 L70.7,63.3 L71.7,63 Z"/>
+        
+</vector>

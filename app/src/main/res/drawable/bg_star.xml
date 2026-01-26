@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Star (Child-like) -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M50,5 L63,35 L95,38 L72,60 L79,92 L50,75 L21,92 L28,60 L5,38 L37,35 Z"
+        android:strokeColor="#FFCA28"
+        android:strokeWidth="2"
+        android:strokeLineJoin="round"/>
+</vector>

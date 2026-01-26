@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <!-- App Name -->
+    <string name="app_name">Zzz Timer Pro+</string>
+    <string name="app_creator">Created by Felipe Plazas</string>
+    
+    <!-- Main Screen -->
+    <string name="start_timer">Start Timer</string>
+    <string name="stop_timer">Stop Timer</string>
+    <string name="pause_timer">Pause Timer</string>
+    <string name="resume_timer">Resume Timer</string>
+    <string name="ambient_sounds">Ambient Sounds</string>
+    <string name="features">Features</string>
+    <string name="statistics">Statistics</string>
+    <string name="settings">Settings</string>
+    <string name="select_duration">Select Duration</string>
+    <string name="minutes">minutes</string>
+    <string name="remaining_time">Remaining Time</string>
+    <string name="increase">Increase</string>
+    <string name="decrease">Decrease</string>
+
+    <!-- Timer -->
+    <string name="timer_running">Timer Running</string>
+    <string name="timer_paused">Timer Paused</string>
+    <string name="timer_complete">Timer Complete!</string>
+    <string name="timer_stopped">Timer Stopped</string>
+    <string name="time_to_sleep">Time to sleep!</string>
+    <string name="time_to_sleep_short">Sleep</string>
+    <string name="media_will_stop">Media will stop gradually</string>
+    <string name="volume_fading">Volume fading…</string>
+
+    <string name="import_sound">Import Sound</string>
+    <string name="timer_zero">0:00</string>
+    <string name="fading_audio">Fading audio...</string>
+    <string name="timer_fading">Fading Out</string>
+    <string name="audio_playing">Playing Audio</string>
+
+    <!-- Language Settings -->
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="select_language">Select Language</string>
+    <string name="language_changed">Language changed successfully</string>
+    <string name="restart_required">The app will restart to apply changes</string>
+    
+    <!-- Ambient Sounds -->
+    <string name="sound_library">Sound Library</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="volume">Volume</string>
+    <string name="loop">Loop</string>
+    
+    <!-- Sound Names -->
+    <string name="sound_soft_rain">Soft Rain</string>
+    <string name="sound_ocean_waves">Ocean Waves</string>
+    <string name="sound_night_forest">Night Forest</string>
+    <string name="sound_gentle_wind">Gentle Wind</string>
+    <string name="sound_white_noise">White Noise</string>
+    <string name="sound_night_birds">Night Birds</string>
+    
+    <!-- Sound Descriptions -->
+    <string name="desc_soft_rain">Gentle rainfall creating a peaceful atmosphere</string>
+    <string name="desc_ocean_waves">Calming waves washing ashore</string>
+    <string name="desc_night_forest">Serene forest sounds at night</string>
+    <string name="desc_gentle_wind">Soft breeze through the trees</string>
+    <string name="desc_white_noise">Consistent ambient sound for deep relaxation</string>
+    <string name="desc_night_birds">Peaceful nighttime bird calls</string>
+    
+    <!-- Statistics -->
+    <string name="weekly_usage">Weekly Usage</string>
+    <string name="total_usage_time">Total Usage Time</string>
+    <string name="most_common_schedule">Most Common Schedule</string>
+    <string name="most_used_sound">Most Used Sound</string>
+    <string name="average_duration">Average Duration</string>
+    <string name="sessions_completed">Sessions Completed</string>
+    <string name="export_data">Export Data</string>
+    <string name="clear_statistics">Clear Statistics</string>
+    <string name="no_data_available">No data available yet</string>
+    <string name="hours">hours</string>
+    <string name="days">days</string>
+    
+    <!-- Days of Week -->
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    
+    <!-- Settings -->
+    <string name="general_settings">General Settings</string>
+    <string name="timer_settings">Timer Settings</string>
+    <string name="sound_settings">Sound Settings</string>
+    <string name="notification_settings">Notification Settings</string>
+    <string name="theme">Theme</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="auto_mode">Auto Mode</string>
+    <string name="enable_vibration">Enable Vibration</string>
+    <string name="enable_dnd">Enable Do Not Disturb</string>
+    <string name="fade_duration">Fade Duration</string>
+    <string name="default_timer_duration">Default Timer Duration</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    
+    <!-- Theme Settings -->
+    <string name="select_theme">Select Theme</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_oled">OLED Black</string>
+    <string name="sleep_tracking">Sleep Tracking</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_name">Timer Notifications</string>
+    <string name="notification_channel_desc">Notifications for timer status</string>
+    <string name="notification_timer_running">Timer is running</string>
+    <string name="notification_timer_complete">Your timer has finished</string>
+    <string name="notification_tap_to_open">Tap to open</string>
+    
+    <!-- Widget -->
+    <string name="widget_name">Zzz Timer Widget</string>
+    <string name="widget_description">Quick access to timer</string>
+    <string name="widget_start">Start</string>
+    <string name="widget_stop">Stop</string>
+    
+    <!-- Dialog Messages -->
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="close">Close</string>
+    
+    <!-- Error Messages -->
+    <string name="error_occurred">An error occurred</string>
+    <string name="error_permission_denied">Permission denied</string>
+    <string name="error_sound_not_found">Sound file not found</string>
+    <string name="error_cannot_start_timer">Cannot start timer</string>
+    <string name="error_export_failed">Export failed</string>
+    
+    <!-- Success Messages -->
+    <string name="success_data_exported">Data exported successfully</string>
+    <string name="success_statistics_cleared">Statistics cleared</string>
+    <string name="success_settings_saved">Settings saved</string>
+    
+    <!-- Permissions -->
+    <string name="permission_notification_title">Notification Permission</string>
+    <string name="permission_notification_message">This app needs notification permission to alert you when the timer completes</string>
+    <string name="permission_dnd_title">Do Not Disturb Permission</string>
+    <string name="permission_dnd_message">This app needs permission to enable Do Not Disturb mode during timer sessions</string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="permission_required_sleep_tracking">Permissions required for sleep tracking</string>
+    
+    <!-- Sleep Tracking Permissions -->
+    <string name="permissions_required">Permissions Required</string>
+    <string name="permissions_denied">Permissions Denied</string>
+    <string name="permission_microphone">Microphone (to monitor sleep sounds)</string>
+    <string name="permission_sensors">Body Sensors (to detect movement)</string>
+    <string name="sleep_tracking_permissions_explanation">Sleep Tracking needs the following permissions to function properly:</string>
+    <string name="required_permissions">Required permissions:</string>
+    <string name="grant_permissions">Grant Permissions</string>
+    <string name="sleep_tracking_requires_permissions">Sleep Tracking requires permissions to function</string>
+    <string name="permissions_granted_success">All permissions granted! You can now use Sleep Tracking.</string>
+    <string name="permissions_denied_explanation">Some permissions were denied. Sleep Tracking may not work correctly without them.</string>
+    <string name="denied_permissions">Denied permissions:</string>
+    <string name="enable_permissions_manually">Please enable these permissions in Settings to use Sleep Tracking.</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="cannot_open_settings">Cannot open settings</string>
+
+    <!-- Time Formats -->
+    <string name="time_format_hours_minutes">%1$d h %2$d min</string>
+    <string name="time_format_minutes_seconds">%1$d:%2$02d</string>
+    <string name="time_format_hours">%1$d hours</string>
+    <string name="time_format_minutes_only">%1$d minutes</string>
+    
+    <!-- License and Trial -->
+    <string name="license_section">License</string>
+    <string name="license_status">License Status</string>
+    <string name="trial_title">Free Trial</string>
+    <string name="trial_status_label">Trial Status</string>
+    <string name="trial_remaining_message">remaining in your free trial</string>
+    <string name="trial_expired">TRIAL EXPIRED</string>
+    <string name="trial_expired_message">Your free trial has ended. Upgrade to premium to continue using all features.</string>
+    <string name="trial_expired_back_blocked">Trial expired. Please upgrade or continue with free version.</string>
+    
+    <!-- Premium Features -->
+    <string name="premium_features_title">Premium Features</string>
+    <string name="feature_unlimited_timer">Unlimited timer duration (up to 120 minutes)</string>
+    <string name="feature_all_sounds">Access to all 6 ambient sounds</string>
+    <string name="feature_detailed_statistics">Detailed statistics with charts</string>
+    <string name="feature_widget_access">Home screen widget</string>
+    <string name="feature_data_export">Export your data</string>
+    
+    <!-- Purchase -->
+    <string name="one_time_payment">One-time payment</string>
+    <string name="purchase_license">Purchase License - $0.99</string>
+    <string name="restore_purchase">Restore Purchase</string>
+    <string name="continue_free_version">Continue with Free Version</string>
+    <string name="purchase_success">Purchase successful! Thank you for supporting us.</string>
+    <string name="purchase_failed">Purchase failed. Please try again.</string>
+    <string name="restore_success">Purchase restored successfully!</string>
+    <string name="restore_failed">No previous purchase found.</string>
+    
+    <!-- Free Version Limitations -->
+    <string name="timer_limit_free_version">Free version limited to 15 minutes. Upgrade to premium for unlimited duration.</string>
+    <string name="sound_locked_free_version">This sound is only available in the premium version.</string>
+    <string name="export_locked_free_version">Data export is only available in the premium version.</string>
+    <string name="widget_locked_free_version">Widget is only available in the premium version.</string>
+    <string name="_30">30</string>
+
+    <!-- Alarms -->
+    <string name="alarms">Alarms</string>
+    <string name="add_alarm">Add Alarm</string>
+    <string name="edit_alarm">Edit Alarm</string>
+    <string name="delete_alarm">Delete Alarm</string>
+    <string name="delete_alarm_confirmation">Are you sure you want to delete this alarm?</string>
+    <string name="alarm_name">Alarm Name</string>
+    <string name="alarm_time">Alarm Time</string>
+    <string name="repeat">Repeat</string>
+    <string name="alarm_sound">Alarm Sound</string>
+    <string name="smart_wake_up">Smart Wake-Up</string>
+    <string name="math_challenge">Math Challenge</string>
+    <string name="wake_window">Wake Window</string>
+    <string name="alarm_limit_free_version">Free version limited to 1 alarm. Upgrade to premium for unlimited alarms.</string>
+    <string name="premium_required">Premium Required</string>
+    <string name="soft_rain">Soft Rain</string>
+    <string name="ocean_waves">Ocean Waves</string>
+    <string name="night_forest">Night Forest</string>
+    <string name="gentle_wind">Gentle Wind</string>
+    <string name="white_noise">White Noise</string>
+    <string name="night_birds">Night Birds</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="trial_badge">TRIAL</string>
+    <string name="trial_days_remaining">%1$d days left in trial</string>
+    
+    <!-- Days of the week (short) -->
+    <string name="day_monday_short">Mon</string>
+    <string name="day_tuesday_short">Tue</string>
+    <string name="day_wednesday_short">Wed</string>
+    <string name="day_thursday_short">Thu</string>
+    <string name="day_friday_short">Fri</string>
+    <string name="day_saturday_short">Sat</string>
+    <string name="day_sunday_short">Sun</string>
+
+    <!-- Smart Wake-Up -->
+    <string name="smart_wake_desc">Wake you during light sleep within 30 minutes before alarm time</string>
+    <string name="math_challenge_desc">Solve math problems to dismiss alarm</string>
+    <string name="solve_to_dismiss">Solve to Dismiss</string>
+    <string name="solve_math_problem">Solve this problem to dismiss the alarm:</string>
+    <string name="solve_math_problem_with">Solve this problem to dismiss the alarm:
+%1$s</string>
+    <string name="incorrect_answer">Incorrect! Try again.</string>
+    <string name="dismiss_alarm">Dismiss Alarm</string>
+    <string name="snooze_alarm">Snooze</string>
+
+    <!-- Saved Timers -->
+    <string name="saved_timers">Saved Timers</string>
+    <string name="add_timer">Add Timer</string>
+    <string name="edit_timer">Edit Timer</string>
+    <string name="delete_timer">Delete Timer</string>
+    <string name="delete_timer_confirmation">Are you sure you want to delete this timer?</string>
+    <string name="timer_name">Timer Name</string>
+    <string name="duration">Duration</string>
+    <string name="sound">Sound</string>
+    <string name="select_sound">Select Sound</string>
+    <string name="no_sound_selected">No sound selected</string>
+    <string name="sound_selected">Sound: %s</string>
+    <string name="fade_out_duration">Fade Out Duration</string>
+    <string name="my_timers">My Timers</string>
+    <string name="quick_start">Quick Start</string>
+
+    <!-- Sleep Tracking -->
+    <string name="start_tracking">Start Sleep Tracking</string>
+    <string name="stop_tracking">Stop Tracking</string>
+    <string name="sleep_score">Sleep Score</string>
+    <string name="sleep_quality">Sleep Quality</string>
+    <string name="sleep_duration">Sleep Duration</string>
+    <string name="deep_sleep">Deep Sleep</string>
+    <string name="light_sleep">Light Sleep</string>
+    <string name="rem_sleep">REM Sleep</string>
+    <string name="awake_time">Awake Time</string>
+    <string name="sleep_phases">Sleep Phases</string>
+    <string name="sleep_insights">Sleep Insights</string>
+    <string name="sleep_history">Sleep History</string>
+    <string name="sleep_tracking_active">Sleep Tracking Active</string>
+    <string name="monitoring_sleep_patterns">Monitoring your sleep patterns...</string>
+    <string name="target_wake_time">Target Wake Time</string>
+    <string name="sleep_session_summary">Sleep Session Summary</string>
+    <string name="quality_excellent">Excellent</string>
+    <string name="quality_good">Good</string>
+    <string name="quality_fair">Fair</string>
+    <string name="quality_poor">Poor</string>
+
+    <!-- Breathing Exercises -->
+    <string name="breathing_exercises">Breathing Exercises</string>
+    <string name="breathing_technique">Breathing Technique</string>
+    <string name="breathing_478">4-7-8 Breathing</string>
+    <string name="breathing_box">Box Breathing</string>
+    <string name="breathing_calm">Calm Breathing</string>
+    <string name="breathing_energizing">Energizing Breath</string>
+    <string name="breathing_478_instructions">Inhale for 4 seconds, hold for 7, exhale for 8. Perfect for falling asleep.</string>
+    <string name="breathing_box_instructions">Inhale, hold, exhale, and pause for 4 seconds each. Great for stress relief.</string>
+    <string name="breathing_calm_instructions">Inhale for 4 seconds, exhale for 6. Simple and calming.</string>
+    <string name="breathing_energizing_instructions">Quick inhale for 2 seconds, exhale for 4. Energizing technique.</string>
+    <string name="start">Start</string>
+    <string name="inhale">Inhale</string>
+    <string name="hold">Hold</string>
+    <string name="exhale">Exhale</string>
+
+
+
+    <!-- Sound Categories -->
+    <string name="category_nature">Nature</string>
+    <string name="category_white_noise">White Noise</string>
+    <string name="category_meditation">Meditation</string>
+    <string name="category_breathing">Breathing</string>
+    <string name="category_custom">Custom</string>
+    <string name="add_custom_sound">Add Custom Sound</string>
+    <string name="import_audio">Import Audio File</string>
+
+    <!-- Additional Sounds -->
+    <string name="sound_pink_noise">Pink Noise</string>
+    <string name="sound_brown_noise">Brown Noise</string>
+    <string name="sound_fan">Fan Sound</string>
+    <string name="sound_forest_day">Forest (Day)</string>
+    <string name="sound_campfire">Campfire</string>
+    <string name="sound_thunderstorm">Thunderstorm</string>
+    <string name="desc_pink_noise">Deeper white noise, excellent for sleep</string>
+    <string name="desc_brown_noise">Deep, rumbling noise for deep relaxation</string>
+    <string name="desc_fan">Consistent fan sound for comfort</string>
+    <string name="desc_forest_day">Daytime forest ambience</string>
+    <string name="desc_campfire">Crackling campfire sounds</string>
+    <string name="desc_thunderstorm">Distant thunder and rain</string>
+
+    <!-- Screen Dimming -->
+    <string name="screen_dimming">Screen Dimming</string>
+    <string name="auto_dim_screen">Auto-dim screen during timer</string>
+    <string name="screen_off_during_timer">Turn screen off during timer</string>
+
+    <!-- Auto-start -->
+    <string name="auto_start_timer">Auto-start Timer</string>
+    <string name="auto_start_on_charger">Start timer when plugged in</string>
+    <string name="auto_start_face_down">Start timer when phone face down</string>
+
+    <!-- Themes -->
+    <string name="theme_settings">Theme Settings</string>
+    <string name="oled_black_mode">OLED Black Mode</string>
+    <string name="custom_colors">Custom Colors</string>
+    <string name="primary_color">Primary Color</string>
+    <string name="accent_color">Accent Color</string>
+
+    <!-- Backup & Sync -->
+    <string name="backup_and_sync">Backup &amp; Sync</string>
+    <string name="cloud_backup">Cloud Backup</string>
+    <string name="backup_now">Backup Now</string>
+    <string name="restore_from_backup">Restore from Backup</string>
+    <string name="last_backup">Last backup</string>
+    <string name="never_backed_up">Never</string>
+    <string name="backup_success">Backup completed successfully</string>
+    <string name="backup_failed">Backup failed</string>
+    <string name="restore_backup_success">Restore completed successfully</string>
+    <string name="restore_backup_failed">Restore failed</string>
+
+    <!-- Health Connect -->
+    <string name="health_connect">Health Connect</string>
+    <string name="sync_with_health_connect">Sync with Health Connect</string>
+    <string name="sync_sleep_data">Sync sleep data to Health Connect</string>
+    <string name="health_connect_not_installed">Health Connect not installed</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_settings">Advanced Settings</string>
+    <string name="haptic_feedback">Haptic Feedback</string>
+    <string name="custom_vibration_pattern">Custom Vibration Pattern</string>
+    <string name="backup_alarm">Backup Alarm</string>
+    <string name="backup_alarm_desc">Loud alarm if smart alarm fails</string>
+    <string name="fade_in_alarm">Fade-in Alarm</string>
+    <string name="fade_in_desc">Gradually increase alarm volume</string>
+
+    <!-- Permissions Rationale -->
+    <string name="permission_audio_rationale">Microphone access is needed to monitor sleep patterns and detect sleep phases.</string>
+    <string name="permission_sensor_rationale">Sensor access is needed to detect movement during sleep.</string>
+    <string name="permission_alarm_rationale">Exact alarm permission is needed to trigger alarms at precise times.</string>
+    <string name="permission_files_rationale">File access is needed to import custom audio files.</string>
+
+    <!-- Widget Updates -->
+    <string name="widget_no_timer">No active timer</string>
+    <string name="widget_time_remaining">Time remaining</string>
+
+    <!-- Misc -->
+    <string name="loading">Loading...</string>
+    <string name="no_alarms">No alarms set</string>
+    <string name="no_timers">No saved timers</string>
+    <string name="no_meditations">No meditations available</string>
+    <string name="coming_soon">Coming soon!</string>
+
+    <!-- Saved Timers (Additional) -->
+    <string name="confirm_delete_timer">Delete timer \"%1$s\"?</string>
+    <string name="timer_saved">Timer saved</string>
+    <string name="timer_updated">Timer updated</string>
+    <string name="timer_deleted">Timer deleted</string>
+    <string name="error_saving_timer">Error saving timer</string>
+    <string name="error_updating_timer">Error updating timer</string>
+    <string name="error_deleting_timer">Error deleting timer</string>
+    <string name="error_starting_timer">Error starting timer</string>
+    <string name="starting_timer">Starting %1$s…</string>
+    <string name="minutes_format">%1$d minutes</string>
+    <string name="sound_format">Sound: %1$s</string>
+    <string name="used_count_format">Used %1$d times</string>
+    <string name="no_sound">No sound</string>
+
+    <!-- Breathing Activity -->
+    <string name="breathe_in">Breathe In</string>
+    <string name="breathe_out">Breathe Out</string>
+    <string name="ready_to_begin">Ready to begin</string>
+    <string name="cycles_completed">%1$d cycles completed</string>
+    <string name="cycle_number">Cycle %1$d</string>
+    <string name="select_technique">Select a Technique</string>
+
+    <!-- Alarm Repeat Labels -->
+    <string name="once">Once</string>
+    <string name="every_day">Every day</string>
+    <string name="weekdays">Weekdays</string>
+    <string name="weekends">Weekends</string>
+
+    <!-- Sleep insights from SleepScoreCalculator -->
+    <string name="insight_great_night">Great night! Your sleep was better than usual.</string>
+    <string name="insight_below_average">Your sleep quality was lower than usual. Try maintaining a consistent sleep schedule.</string>
+    <string name="insight_low_deep_sleep">You had less deep sleep than optimal. Consider reducing caffeine intake.</string>
+    <string name="insight_awake_periods">You were awake for extended periods. Try creating a more relaxing sleep environment.</string>
+    <string name="insight_consistent">Your sleep was consistent with your average.</string>
+
+    <!-- Accessibility Content Descriptions -->
+    <string name="desc_icon_rain">Rain sound icon</string>
+    <string name="desc_icon_ocean">Ocean waves sound icon</string>
+    <string name="desc_icon_forest">Forest sound icon</string>
+    <string name="desc_icon_wind">Wind sound icon</string>
+    <string name="desc_icon_noise">White noise icon</string>
+    <string name="desc_icon_birds">Bird sounds icon</string>
+    <string name="desc_increase_time">Increase timer duration</string>
+    <string name="desc_decrease_time">Decrease timer duration</string>
+    <string name="desc_play_sound">Play sound</string>
+    <string name="desc_pause_sound">Pause sound</string>
+    <string name="desc_stop_sound">Stop sound</string>
+    <string name="desc_back_button">Go back</string>
+    <string name="desc_settings">Open settings</string>
+    <string name="desc_trial_badge">Trial status badge</string>
+    
+    <string name="vibration">Vibration</string>
+    <string name="do_not_disturb">Do Not Disturb</string>
+</resources>

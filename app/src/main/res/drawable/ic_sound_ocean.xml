@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Premium Ocean Wave -->
+    <path
+        android:fillColor="#0A84FF"
+        android:fillAlpha="0.2"
+        android:pathData="M2,12 C2,12 5,8 12,8 C19,8 22,12 22,12 V20 H2 V12 Z"/>
+        
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#0A84FF"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M2,12 C4,10 7,9 12,9 C17,9 20,10 22,12"/>
+        
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#0A84FF"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.6"
+        android:pathData="M4,15 C6,14 8,13.5 12,13.5 C16,13.5 18,14 20,15"/>
+</vector>

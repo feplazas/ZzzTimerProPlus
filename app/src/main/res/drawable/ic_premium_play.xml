@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+  <!-- Outer Glow Ring -->
+  <path
+      android:pathData="M60,60m-58,0a58,58 0,1 1,116 0a58,58 0,1 1,-116 0">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:centerX="60"
+          android:centerY="60"
+          android:gradientRadius="58"
+          android:type="radial">
+        <item android:offset="0.8" android:color="#FFFFD700"/>
+        <item android:offset="1" android:color="#00FFD700"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  
+  <!-- Main Button Body -->
+  <path
+      android:pathData="M60,60m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startX="60"
+          android:startY="12"
+          android:endX="60"
+          android:endY="108"
+          android:type="linear">
+        <item android:offset="0" android:color="#FFFFE57F"/>
+        <item android:offset="1" android:color="#FFFFC107"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  
+  <!-- Play Icon (Cutout) -->
+  <path
+      android:pathData="M50,40 L80,60 L50,80 Z"
+      android:fillColor="#5D4037"/>
+</vector>

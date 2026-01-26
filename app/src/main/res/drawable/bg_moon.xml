@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Moon (Child-like, The Little Prince style) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M70,10 A40,40 0 1,1 30,90 A30,30 0 1,0 70,10 Z"
+        android:alpha="0.9"/>
+    <!-- Craters -->
+    <circle cx="50" cy="40" r="3" android:fillColor="#E0E0E0" android:alpha="0.5"/>
+    <circle cx="60" cy="60" r="5" android:fillColor="#E0E0E0" android:alpha="0.5"/>
+</vector>

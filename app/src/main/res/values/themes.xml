@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== DREAMY SLEEP THEME - Light (Default) ===== -->
+    <style name="Theme.ZzzTimerPro" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary - Soft Violet -->
+        <item name="colorPrimary">@color/primary_violet</item>
+        <item name="colorPrimaryVariant">@color/primary_violet</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <!-- Secondary - Seafoam -->
+        <item name="colorSecondary">@color/secondary_seafoam</item>
+        <item name="colorSecondaryVariant">@color/accent_rose</item>
+        <item name="colorOnSecondary">@color/white</item>
+        
+        <!-- Background & Surface - Little Prince Theme -->
+        <item name="android:windowBackground">@drawable/bg_little_prince</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="colorSurface">@color/surface_light</item>
+        <item name="colorOnSurface">@color/text_on_light</item>
+        <item name="colorSurfaceVariant">@color/card_light</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary_light</item>
+        <item name="colorOutlineVariant">@color/border_subtle</item>
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        
+        <!-- Navigation Bar -->
+        <item name="android:navigationBarColor">@color/bg_light</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        
+        <!-- Text Colors -->
+        <item name="android:textColorPrimary">@color/text_on_light</item>
+        <item name="android:textColorSecondary">@color/text_secondary_light</item>
+        <item name="android:textColorHint">@color/text_tertiary</item>
+        
+        <!-- Ripple -->
+        <item name="android:colorControlHighlight">#1AA88BEB</item>
+        
+        <!-- Dialog -->
+        <item name="dialogTheme">@style/Theme.ZzzTimerPro.Dialog</item>
+        <item name="alertDialogTheme">@style/Theme.ZzzTimerPro.Dialog</item>
+    </style>
+    
+    <!-- ===== DREAMY SLEEP THEME - Dark (Deep Plum Night) ===== -->
+    <style name="Theme.ZzzTimerPro.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary - Lighter Violet for dark -->
+        <item name="colorPrimary">@color/primary_violet_dark</item>
+        <item name="colorPrimaryVariant">@color/primary_violet</item>
+        <item name="colorOnPrimary">@color/bg_dark</item>
+        
+        <!-- Secondary -->
+        <item name="colorSecondary">@color/accent_champagne_dark</item>
+        <item name="colorSecondaryVariant">@color/accent_rose</item>
+        <item name="colorOnSecondary">@color/bg_dark</item>
+        
+        <!-- Background & Surface - Deep Plum -->
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorOnSurface">@color/text_on_dark</item>
+        <item name="colorSurfaceVariant">@color/card_dark</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary_dark</item>
+        <item name="colorOutlineVariant">@color/border_subtle_dark</item>
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+        
+        <!-- Navigation Bar -->
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        
+        <!-- Text Colors -->
+        <item name="android:textColorPrimary">@color/text_on_dark</item>
+        <item name="android:textColorSecondary">@color/text_secondary_dark</item>
+        <item name="android:textColorHint">@color/text_secondary_dark</item>
+        
+        <!-- Ripple -->
+        <item name="android:colorControlHighlight">#1AEADDFF</item>
+    </style>
+    
+    <!-- Light Theme Alias -->
+    <style name="Theme.ZzzTimerPro.Light" parent="Theme.ZzzTimerPro" />
+    
+    <!-- OLED Theme (uses dark as base with pure black) -->
+    <style name="Theme.ZzzTimerPro.OLED" parent="Theme.ZzzTimerPro.Dark">
+        <item name="android:colorBackground">@color/pure_black</item>
+        <item name="colorSurface">@color/pure_black</item>
+        <item name="colorSurfaceVariant">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/pure_black</item>
+        <item name="android:navigationBarColor">@color/pure_black</item>
+    </style>
+    
+    <!-- Dialog Theme -->
+    <style name="Theme.ZzzTimerPro.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/card_light</item>
+        <item name="colorOnSurface">@color/text_on_light</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.Title</item>
+    </style>
+    
+    <style name="MaterialAlertDialog.Title" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/text_on_light</item>
+    </style>
+</resources>

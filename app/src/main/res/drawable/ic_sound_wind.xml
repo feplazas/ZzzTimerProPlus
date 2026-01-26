@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Premium Wind -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#E5E5EA"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M4,8 C7,8 8,6 9,6 C10,6 11,8 14,8 C17,8 18,6 19,6"/>
+        
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#E5E5EA"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.6"
+        android:pathData="M2,14 C5,14 6,12 8,12 C9,12 10,14 13,14 C16,14 18,12 20,12"/>
+</vector>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Premium White Noise -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#8E8E93"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M2,12 C2,12 4,8 6,12 C8,16 10,8 12,12 C14,16 16,8 18,12 C20,16 22,12 22,12"/>
+        
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#8E8E93"
+        android:strokeWidth="1.5"
+        android:strokeAlpha="0.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M3,12 C3,12 4.5,10 6,12 C7.5,14 9,10 12,12 C15,14 16.5,10 18,12 C19.5,14 21,12 21,12"/>
+</vector>

@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Breathing/lungs icon -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M12,2C12,2 8,6 8,10C8,14 12,18 12,18C12,18 16,14 16,10C16,6 12,2 12,2M12,4.8C13.5,6.8 14,8.5 14,10C14,12.5 12,15.2 12,15.2C12,15.2 10,12.5 10,10C10,8.5 10.5,6.8 12,4.8M4,12C4,12 2,14 2,17C2,20 4,22 4,22C4,22 6,20 6,17C6,14 4,12 4,12M20,12C20,12 18,14 18,17C18,20 20,22 20,22C20,22 22,20 22,17C22,14 20,12 20,12"/>
+</vector>

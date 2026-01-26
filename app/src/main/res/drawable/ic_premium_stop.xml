@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+  
+  <!-- Border Ring -->
+  <path
+      android:pathData="M60,60m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0"
+      android:strokeWidth="4"
+      android:strokeColor="#FFD700"/>
+      
+  <!-- Inner Fill (Semi transparent) -->
+  <path
+      android:pathData="M60,60m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0"
+      android:fillColor="#20FFD700"/>
+      
+  <!-- Stop Icon -->
+  <path
+      android:pathData="M45,45 L75,45 L75,75 L45,75 Z"
+      android:fillColor="#FFD700"/>
+</vector>

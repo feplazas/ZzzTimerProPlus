@@ -1,0 +1,16 @@
+config:
+    active: true
+  FunctionNaming:
+    active: true
+  PackageNaming:
+naming:
+    maxLineLength: 140
+    active: true
+  MaxLineLength:
+    active: false
+  MagicNumber:
+style:
+  active: true
+processors:
+  validation: true
+
