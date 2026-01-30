@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +14,13 @@
             --accent-gold: #fbbf24;
             --accent-blue: #60a5fa;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background: linear-gradient(135deg, var(--bg-dark) 0%, #1a1a2e 100%);
@@ -27,35 +28,35 @@
             line-height: 1.7;
             min-height: 100vh;
         }
-        
+
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 40px;
         }
-        
+
         .header h1 {
             font-size: 2.5rem;
             color: var(--accent-gold);
             margin-bottom: 10px;
         }
-        
+
         .header .app-name {
             font-size: 1.2rem;
             color: var(--text-secondary);
         }
-        
+
         .header .last-updated {
             font-size: 0.9rem;
             color: var(--text-secondary);
             margin-top: 10px;
         }
-        
+
         .card {
             background: var(--bg-card);
             border-radius: 16px;
@@ -63,7 +64,7 @@
             margin-bottom: 24px;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         h2 {
             color: var(--accent-gold);
             font-size: 1.4rem;
@@ -72,44 +73,44 @@
             align-items: center;
             gap: 10px;
         }
-        
+
         h2::before {
             content: "★";
             color: var(--accent-gold);
         }
-        
+
         p {
             color: var(--text-secondary);
             margin-bottom: 16px;
         }
-        
+
         ul {
             color: var(--text-secondary);
             margin-left: 20px;
             margin-bottom: 16px;
         }
-        
+
         li {
             margin-bottom: 8px;
         }
-        
+
         .highlight {
             color: var(--accent-blue);
             font-weight: 600;
         }
-        
+
         .footer {
             text-align: center;
             padding: 40px 20px;
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
-        
+
         .footer a {
             color: var(--accent-gold);
             text-decoration: none;
         }
-        
+
         .stars {
             position: fixed;
             top: 0;
@@ -120,7 +121,7 @@
             overflow: hidden;
             z-index: -1;
         }
-        
+
         .star {
             position: absolute;
             width: 3px;
@@ -130,101 +131,115 @@
             opacity: 0.5;
             animation: twinkle 3s infinite;
         }
-        
+
         @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.8; }
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="stars" id="stars"></div>
-    
+
     <div class="container">
         <div class="header">
             <h1>Privacy Policy</h1>
             <div class="app-name">Zzz Timer Pro+</div>
             <div class="last-updated">Last Updated: January 30, 2026</div>
         </div>
-        
+
         <div class="card">
             <h2>Introduction</h2>
             <p>
-                Zzz Timer Pro+ ("the App") is developed by <span class="highlight">Felipe Plazas</span>. 
+                Zzz Timer Pro+ ("the App") is developed by <span class="highlight">Felipe Plazas</span>.
                 This privacy policy explains how we handle your information when you use our sleep timer application.
             </p>
             <p>
-                <strong>We value your privacy.</strong> This app is designed to work entirely offline and does not collect, 
+                <strong>We value your privacy.</strong> This app is designed to work entirely offline and does not
+                collect,
                 store, or transmit any personal data to external servers.
             </p>
         </div>
-        
+
         <div class="card">
             <h2>Data Collection</h2>
             <p>We are committed to transparency. Here's what you need to know:</p>
             <ul>
-                <li><span class="highlight">No Personal Data Collection:</span> We do not collect names, emails, or any personally identifiable information.</li>
+                <li><span class="highlight">No Personal Data Collection:</span> We do not collect names, emails, or any
+                    personally identifiable information.</li>
                 <li><span class="highlight">No Analytics:</span> We do not use third-party analytics services.</li>
-                <li><span class="highlight">No Advertising:</span> The app does not contain ads and does not share data with advertisers.</li>
+                <li><span class="highlight">No Advertising:</span> The app does not contain ads and does not share data
+                    with advertisers.</li>
                 <li><span class="highlight">No Network Requests:</span> The app functions entirely offline.</li>
             </ul>
         </div>
-        
+
         <div class="card">
             <h2>Local Data Storage</h2>
             <p>The following data is stored <span class="highlight">locally on your device only</span>:</p>
             <ul>
                 <li><strong>Timer Settings:</strong> Your preferred timer duration and sound preferences.</li>
                 <li><strong>Sleep Statistics:</strong> Session history and usage data for your personal reference.</li>
-                <li><strong>App Preferences:</strong> Theme settings, vibration preferences, and other customizations.</li>
-                <li><strong>CPAP Reminder Settings:</strong> If enabled, your CPAP maintenance reminder preferences.</li>
+                <li><strong>App Preferences:</strong> Theme settings, vibration preferences, and other customizations.
+                </li>
+                <li><strong>CPAP Reminder Settings:</strong> If enabled, your CPAP maintenance reminder preferences.
+                </li>
             </ul>
             <p>All this data remains on your device and is never transmitted externally.</p>
         </div>
-        
+
         <div class="card">
             <h2>Permissions</h2>
             <p>The app may request the following permissions:</p>
             <ul>
                 <li><strong>Notifications:</strong> To alert you when the timer completes.</li>
                 <li><strong>Do Not Disturb:</strong> Optional - to enable quiet mode during sleep sessions.</li>
-                <li><strong>Microphone (Sleep Tracking):</strong> Optional - used locally for sleep sound monitoring, never recorded or transmitted.</li>
+                <li><strong>Microphone (Sleep Tracking):</strong> Optional - used locally for sleep sound monitoring,
+                    never recorded or transmitted.</li>
                 <li><strong>Vibration:</strong> For haptic feedback when timers complete.</li>
             </ul>
         </div>
-        
+
         <div class="card">
             <h2>Children's Privacy</h2>
             <p>
-                This app is suitable for all ages and does not collect any personal information 
+                This app is suitable for all ages and does not collect any personal information
                 from children or any other users.
             </p>
         </div>
-        
+
         <div class="card">
             <h2>Changes to This Policy</h2>
             <p>
-                We may update this privacy policy from time to time. Any changes will be reflected 
+                We may update this privacy policy from time to time. Any changes will be reflected
                 on this page with an updated "Last Updated" date.
             </p>
         </div>
-        
+
         <div class="card">
             <h2>Contact Us</h2>
             <p>
                 If you have any questions about this privacy policy or the app, please contact us at:
             </p>
             <p>
-                <span class="highlight">Email:</span> felipeplazas.dev@gmail.com
+                <span class="highlight">Email:</span> feplazas@gmail.com
             </p>
         </div>
-        
+
         <div class="footer">
             <p>© 2026 Felipe Plazas. All Rights Reserved.</p>
             <p>Made with ❤️ for better sleep</p>
         </div>
     </div>
-    
+
     <script>
         // Create starry background
         const starsContainer = document.getElementById('stars');
@@ -240,4 +255,5 @@
         }
     </script>
 </body>
+
 </html>

@@ -125,5 +125,5 @@ https://[your-github-username].github.io/ZzzTimerProPlus/
 ## Contact Email
 
 ```
-felipeplazas.dev@gmail.com
+feplazas@gmail.com
 ```
