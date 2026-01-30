@@ -23,7 +23,7 @@
     <color name="on_secondary">#263238</color>
     
     <color name="background">#E3F2FD</color>   <!-- Very Light Blue Background -->
-    <color name="surface">#FFFFFF</color>
+    <color name="surface">#FFF9E6</color>       <!-- Pastel yellow for cards -->
     <color name="error">#B00020</color>
     
     <color name="on_background">#263238</color> <!-- Dark text on light blue -->
@@ -34,7 +34,7 @@
     <color name="transparent">#00000000</color>
 
     <!-- Custom Colors for App -->
-    <color name="card_background">#FFFFFF</color>     <!-- White cards -->
+    <color name="card_background">#FFF9E6</color>     <!-- Soft pastel yellow (Little Prince) -->
     <color name="timer_text">#263238</color>          <!-- Dark blue-grey text -->
     <color name="timer_secondary_text">#546E7A</color>
     
@@ -46,6 +46,10 @@
     
     <color name="chart_grid">#40263238</color> <!-- Semi-transparent dark grid -->
     <color name="chart_axis">#80263238</color>
+    
+    <!-- Pastel Yellow for Card Backgrounds (Very Soft - Little Prince Theme) -->
+    <color name="card_pastel_yellow">#FFF9E6</color> <!-- Soft cream yellow - noticeably warm -->
+    <color name="card_pastel_yellow_dark">#2B2622</color> <!-- Dark mode version -->
     
     <!-- Night Mode (Deep Space) -->
     <color name="night_background">#1A237E</color>
@@ -95,8 +99,8 @@
     <!-- LEGACY COLORS RESTORED FOR COMPATIBILITY -->
     <color name="primary_violet">#90CAF9</color> <!-- Mapped to new primary -->
     <color name="bg_light">#E3F2FD</color>       <!-- Mapped to new background -->
-    <color name="surface_light">#FFFFFF</color>
-    <color name="card_light">#FFFFFF</color>
+    <color name="surface_light">#FFF9E6</color> <!-- Pastel yellow surface -->
+    <color name="card_light">#FFF9E6</color>     <!-- Soft pastel yellow -->
     <color name="text_on_light">#263238</color>
     <color name="text_secondary_light">#546E7A</color>
     <color name="text_tertiary">#78909C</color>
@@ -128,4 +132,8 @@
     <color name="shadow_dark">#80000000</color>
     <color name="status_error">#B00020</color>
     <color name="primary_night_blue">#5E81AC</color>
+    
+    <!-- Ripple/Touch Feedback Colors -->
+    <color name="ripple_light">#1A90CAF9</color>  <!-- 10% primary blue -->
+    <color name="ripple_dark">#26FFFFFF</color>   <!-- 15% white -->
 </resources>

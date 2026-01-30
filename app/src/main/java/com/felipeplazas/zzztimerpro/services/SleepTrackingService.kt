@@ -97,9 +97,18 @@ class SleepTrackingService : Service(), SensorEventListener {
             phase = "START_CMD",
             event = intent?.action ?: "unknown",
             metrics = mapOf(
-                "startId" to startId
+                "startId" to startId,
+                "is_redelivery" to ((flags and START_FLAG_REDELIVERY) != 0)
             )
         )
+        if ((flags and START_FLAG_REDELIVERY) != 0) {
+            LogExt.logStructured(
+                tag = "SLP", 
+                phase = "LIFECYCLE", 
+                event = "service_restored_after_kill", 
+                metrics = mapOf("flags" to flags)
+            )
+        }
         when (intent?.action) {
             ACTION_START_TRACKING -> {
                 currentSessionId = intent.getLongExtra(EXTRA_SESSION_ID, 0)
@@ -127,7 +136,7 @@ class SleepTrackingService : Service(), SensorEventListener {
                 stopTracking()
             }
         }
-        return START_STICKY
+        return START_REDELIVER_INTENT
     }
 
     override fun onBind(intent: Intent?): IBinder = binder
@@ -201,6 +210,40 @@ class SleepTrackingService : Service(), SensorEventListener {
     private fun stopTracking() {
         isTracking = false
         updateState(isTracking = false)
+        
+        // CRITICAL: Mark session as completed and needing aggregation
+        // This ensures phases are calculated even if service is killed
+        serviceScope.launch {
+            try {
+                val database = AppDatabase.getDatabase(this@SleepTrackingService)
+                currentSessionId?.let { sessionId ->
+                    val session = database.sleepSessionDao().getSessionById(sessionId)
+                    session?.let {
+                        val updated = it.copy(
+                            endTime = System.currentTimeMillis(),
+                            completed = true,
+                            needsAggregation = true
+                        )
+                        database.sleepSessionDao().updateSession(updated)
+                        LogExt.logStructured(
+                            tag = "SLP",
+                            phase = "STOP_TRACKING",
+                            event = "session_marked_complete",
+                            metrics = mapOf("session_id" to sessionId)
+                        )
+                    }
+                }
+            } catch (e: Exception) {
+                LogExt.logStructured(
+                    tag = "SLP",
+                    phase = "ERROR",
+                    event = "stop_save_failed",
+                    severity = LogExt.Severity.ERROR,
+                    metrics = mapOf("error" to (e.message ?: "unknown"))
+                )
+            }
+        }
+        
         sensorManager.unregisterListener(this)
         stopAudioMonitoring()
         trackingJob?.cancel()
@@ -285,6 +328,10 @@ class SleepTrackingService : Service(), SensorEventListener {
 
     private fun startAudioMonitoring() {
         try {
+            // Release existing recorder if any (safety for restarts)
+            mediaRecorder?.release()
+            mediaRecorder = null
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 mediaRecorder = MediaRecorder(this)
             } else {
@@ -524,11 +571,13 @@ class SleepTrackingService : Service(), SensorEventListener {
     override fun onDestroy() {
         super.onDestroy()
         stopTracking()
-        serviceScope.cancel()
+        // Attempt to save final data before cancelling scope
+        // Note: usage of runBlocking here is risky for ANR but ensures save.
+        // Given we save every 30s, we can skip this or use a non-cancellable scope if critical.
+        // For now, removing the launch-after-cancel bug.
         analysisScope.cancel()
-        serviceScope.launch {
-            saveCyclesToDatabase()
-        }
+        serviceScope.cancel()
+        
         LogExt.logStructured(
             tag = "SLP",
             phase = "SHUTDOWN",

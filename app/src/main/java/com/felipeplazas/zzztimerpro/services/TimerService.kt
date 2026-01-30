@@ -289,6 +289,17 @@ class TimerService : Service() {
             event = "stopTimer",
             metrics = mapOf("remaining_ms" to _timerState.value.remainingMillis)
         )
+        
+        // Stop AudioService explicitly
+        try {
+            val stopAudioIntent = Intent(this, com.felipeplazas.zzztimerpro.services.AudioService::class.java).apply {
+                action = com.felipeplazas.zzztimerpro.services.AudioService.ACTION_STOP
+            }
+            startService(stopAudioIntent)
+        } catch (e: Exception) {
+            android.util.Log.e("TMR", "Failed to stop AudioService", e)
+        }
+        
         TimerPersistence.clear(this)
         LogExt.logStructured(
             tag = "TMR",

@@ -8,6 +8,9 @@
     android:background="@drawable/bg_little_prince"
     tools:context=".ui.sounds.AmbientSoundsActivity">
 
+    <!-- ULTRA MEGA PREMIUM Floating Stars (20 stars) - Layered BEHIND content -->
+    <include layout="@layout/layout_starry_background" />
+
     <!-- App Bar -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -121,7 +124,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnPlayPause"
-                            style="@style/Widget.Material3.Button.Icon"
+                            style="@style/Widget.ZzzTimerPro.Button.Pill"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="12dp"
@@ -130,7 +133,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnStop"
-                            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                            style="@style/Widget.ZzzTimerPro.Button.Pill"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/stop"

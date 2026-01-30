@@ -28,6 +28,9 @@ class AlarmsActivity : BaseActivity() {
         binding = ActivityAlarmsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Start floating star animations
+        com.felipeplazas.zzztimerpro.utils.StarAnimationHelper.startStarAnimations(this)
+
         repository = ScheduledAlarmsRepository.getInstance(this)
         alarmScheduler = AlarmScheduler(this)
         licenseManager = LicenseManager(this)

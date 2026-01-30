@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_little_prince">
 
+    <!-- ULTRA MEGA PREMIUM Floating Stars (20 stars) - Layered BEHIND content -->
+    <include layout="@layout/layout_starry_background" />
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,10 +47,10 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnStartStop"
+                style="@style/Widget.ZzzTimerPro.Button.Primary"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:text="@string/start_tracking"
-                android:textSize="18sp"
                 android:layout_marginBottom="24dp"
                 app:cornerRadius="32dp" />
 
@@ -58,8 +61,8 @@
                     app:cardCornerRadius="16dp"
                     app:cardElevation="0dp"
                     app:strokeWidth="1dp"
-                    app:strokeColor="#33FFFFFF"
-                    android:backgroundTint="#20000000">
+                    app:strokeColor="?attr/colorOutlineVariant"
+                    app:cardBackgroundColor="?attr/colorSurface">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -72,8 +75,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/sleep_score"
                             android:textSize="16sp"
-                            android:textColor="@android:color/white"
-                            android:alpha="0.8"
+                            android:textColor="?attr/colorOnSurfaceVariant"
                             android:layout_marginBottom="8dp" />
 
                         <TextView
@@ -83,7 +85,7 @@
                             android:text="0"
                             android:textSize="56sp"
                             android:textStyle="bold"
-                            android:textColor="@android:color/white"
+                            android:textColor="?attr/colorOnSurface"
                             android:layout_marginBottom="4dp" />
 
                         <TextView
@@ -92,7 +94,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/quality_excellent"
                             android:textSize="18sp"
-                            android:textColor="#FFD700"
+                            android:textColor="?attr/colorPrimary"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -114,8 +116,8 @@
                     app:cardCornerRadius="16dp"
                     app:cardElevation="0dp"
                     app:strokeWidth="1dp"
-                    app:strokeColor="#33FFFFFF"
-                    android:backgroundTint="#20000000">
+                    app:strokeColor="?attr/colorOutlineVariant"
+                    app:cardBackgroundColor="?attr/colorSurface">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -124,38 +126,36 @@
                         android:padding="16dp"
                         android:gravity="center">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/sleep_duration"
-                            android:textSize="14sp"
-                            android:textColor="@android:color/white"
-                            android:alpha="0.7"
-                            android:layout_marginBottom="4dp" />
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
                             <TextView
-                                android:id="@+id/tvSleepDurationValue"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0"
-                                android:textSize="24sp"
-                                android:textColor="@android:color/white"
-                                android:textStyle="bold"
-                                android:layout_marginEnd="4dp"/>
-
-                            <TextView
-                                android:id="@+id/tvSleepDurationUnit"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/minutes"
+                                android:text="@string/sleep_duration"
                                 android:textSize="14sp"
-                                android:textColor="@android:color/white"
-                                android:alpha="0.7" />
+                                android:textColor="?attr/colorOnSurfaceVariant"
+                                android:layout_marginBottom="4dp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvSleepDurationValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:textSize="24sp"
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textStyle="bold"
+                                    android:layout_marginEnd="4dp"/>
+
+                                <TextView
+                                    android:id="@+id/tvSleepDurationUnit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/minutes"
+                                    android:textSize="14sp"
+                                    android:textColor="?attr/colorOnSurfaceVariant" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -170,8 +170,8 @@
                         app:cardCornerRadius="16dp"
                         app:cardElevation="0dp"
                         app:strokeWidth="1dp"
-                        app:strokeColor="#33FFFFFF"
-                        android:backgroundTint="#20000000">
+                        app:strokeColor="?attr/colorOutlineVariant"
+                        app:cardBackgroundColor="?attr/colorSurface">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -185,8 +185,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/deep_sleep"
                                 android:textSize="14sp"
-                                android:textColor="@android:color/white"
-                                android:alpha="0.7"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:layout_marginBottom="4dp" />
 
                             <LinearLayout
@@ -200,7 +199,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textSize="24sp"
-                                    android:textColor="@android:color/white"
+                                    android:textColor="?attr/colorOnSurface"
                                     android:textStyle="bold"
                                     android:layout_marginEnd="4dp"/>
 
@@ -210,8 +209,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/minutes"
                                     android:textSize="14sp"
-                                    android:textColor="@android:color/white"
-                                    android:alpha="0.7" />
+                                    android:textColor="?attr/colorOnSurfaceVariant" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -235,8 +233,8 @@
                         app:cardCornerRadius="16dp"
                         app:cardElevation="0dp"
                         app:strokeWidth="1dp"
-                        app:strokeColor="#33FFFFFF"
-                        android:backgroundTint="#20000000">
+                        app:strokeColor="?attr/colorOutlineVariant"
+                        app:cardBackgroundColor="?attr/colorSurface">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -250,8 +248,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/light_sleep"
                                 android:textSize="14sp"
-                                android:textColor="@android:color/white"
-                                android:alpha="0.7"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:layout_marginBottom="4dp" />
 
                             <LinearLayout
@@ -265,7 +262,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textSize="24sp"
-                                    android:textColor="@android:color/white"
+                                    android:textColor="?attr/colorOnSurface"
                                     android:textStyle="bold"
                                     android:layout_marginEnd="4dp"/>
 
@@ -275,8 +272,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/minutes"
                                     android:textSize="14sp"
-                                    android:textColor="@android:color/white"
-                                    android:alpha="0.7" />
+                                    android:textColor="?attr/colorOnSurfaceVariant" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -291,8 +287,8 @@
                         app:cardCornerRadius="16dp"
                         app:cardElevation="0dp"
                         app:strokeWidth="1dp"
-                        app:strokeColor="#33FFFFFF"
-                        android:backgroundTint="#20000000">
+                        app:strokeColor="?attr/colorOutlineVariant"
+                        app:cardBackgroundColor="?attr/colorSurface">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -306,8 +302,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/rem_sleep"
                                 android:textSize="14sp"
-                                android:textColor="@android:color/white"
-                                android:alpha="0.7"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:layout_marginBottom="4dp" />
 
                             <LinearLayout
@@ -321,7 +316,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textSize="24sp"
-                                    android:textColor="@android:color/white"
+                                    android:textColor="?attr/colorOnSurface"
                                     android:textStyle="bold"
                                     android:layout_marginEnd="4dp"/>
 
@@ -331,8 +326,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/minutes"
                                     android:textSize="14sp"
-                                    android:textColor="@android:color/white"
-                                    android:alpha="0.7" />
+                                    android:textColor="?attr/colorOnSurfaceVariant" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -343,14 +337,13 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnViewHistory"
-                style="@style/Widget.Material3.Button.OutlinedButton"
+                style="@style/Widget.ZzzTimerPro.Button.Pill"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:text="@string/sleep_history"
-                android:textSize="16sp"
-                android:textColor="#FFD700"
-                app:strokeColor="#FFD700"
-                app:iconTint="#FFD700"
+                android:textColor="?attr/colorPrimary"
+                app:strokeColor="?attr/colorPrimary"
+                app:iconTint="?attr/colorPrimary"
                 app:icon="@drawable/ic_chart"
                 app:iconGravity="textStart" />
 
@@ -358,5 +351,7 @@
 
     </androidx.core.widget.NestedScrollView>
 
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 

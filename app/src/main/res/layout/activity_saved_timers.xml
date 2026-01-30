@@ -4,7 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.savedtimers.SavedTimersActivity">
+    tools:context=".ui.savedtimers.SavedTimersActivity"
+    android:background="@drawable/bg_little_prince">
+
+    <!-- ULTRA MEGA PREMIUM Floating Stars (20 stars) - Layered BEHIND content -->
+    <include layout="@layout/layout_starry_background" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

@@ -1,23 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
-    android:width="120dp"
-    android:height="120dp"
-    android:viewportWidth="120"
-    android:viewportHeight="120">
-  
-  <!-- Border Ring -->
-  <path
-      android:pathData="M60,60m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0"
-      android:strokeWidth="4"
-      android:strokeColor="#FFD700"/>
-      
-  <!-- Inner Fill (Semi transparent) -->
-  <path
-      android:pathData="M60,60m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0"
-      android:fillColor="#20FFD700"/>
-      
-  <!-- Stop Icon -->
-  <path
-      android:pathData="M45,45 L75,45 L75,75 L45,75 Z"
-      android:fillColor="#FFD700"/>
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    
+    <!-- Outer Soft Glow (Atmospheric) -->
+    <path
+        android:pathData="M48,48m-46,0a46,46 0,1 1,92 0a46,46 0,1 1,-92 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:centerX="48"
+                android:centerY="48"
+                android:gradientRadius="46"
+                android:type="radial">
+                <item android:offset="0.75" android:color="#25B45309"/>
+                <item android:offset="1" android:color="#00B45309"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Planet Base (Sandy/Brown Asteroid B-612 Style) -->
+    <path
+        android:pathData="M48,48m-38,0a38,38 0,1 1,76 0a38,38 0,1 1,-76 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:startX="24"
+                android:startY="16"
+                android:endX="72"
+                android:endY="80"
+                android:type="linear">
+                <item android:offset="0" android:color="#FFE7D4B5"/>
+                <item android:offset="0.35" android:color="#FFD4A574"/>
+                <item android:offset="0.7" android:color="#FFB8860B"/>
+                <item android:offset="1" android:color="#FF8B6914"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Planet Surface Texture - Crater 1 (Darker for depth) -->
+    <path
+        android:pathData="M28,36m-6,0a6,5 0,1 1,12 0a6,5 0,1 1,-12 0"
+        android:fillColor="#25654321"/>
+    
+    <!-- Planet Surface Texture - Crater 2 -->
+    <path
+        android:pathData="M62,44m-5,0a5,4 0,1 1,10 0a5,4 0,1 1,-10 0"
+        android:fillColor="#20654321"/>
+    
+    <!-- Planet Surface Texture - Crater 3 -->
+    <path
+        android:pathData="M40,65m-8,0a8,6 0,1 1,16 0a8,6 0,1 1,-16 0"
+        android:fillColor="#18654321"/>
+
+    <!-- Tiny Volcano (Little Prince signature) -->
+    <path
+        android:pathData="M70,58 L74,52 L78,58 Z"
+        android:fillColor="#25654321"/>
+    
+    <!-- Planet Highlight (3D Effect - More subtle) -->
+    <path
+        android:pathData="M48,48m-38,0a38,38 0,1 1,76 0a38,38 0,1 1,-76 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:centerX="32"
+                android:centerY="28"
+                android:gradientRadius="45"
+                android:type="radial">
+                <item android:offset="0" android:color="#40FFFFFF"/>
+                <item android:offset="0.35" android:color="#00FFFFFF"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Stop Icon - Rounded Square (Premium Style with better contrast) -->
+    <path
+        android:pathData="M34,34 L62,34 Q66,34 66,38 L66,58 Q66,62 62,62 L34,62 Q30,62 30,58 L30,38 Q30,34 34,34 Z"
+        android:fillColor="#5D3A1A"/>
+    
+    <!-- Stop Icon Highlight -->
+    <path
+        android:pathData="M34,34 L62,34 Q66,34 66,38 L66,42 Q48,46 30,42 L30,38 Q30,34 34,34 Z"
+        android:fillColor="#18FFFFFF"/>
+        
 </vector>

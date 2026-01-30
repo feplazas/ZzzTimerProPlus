@@ -40,6 +40,7 @@ class StatisticsActivity : BaseActivity() {
         setupListeners()
         loadStatistics()
         updateUIForLicense()
+        com.felipeplazas.zzztimerpro.utils.StarAnimationHelper.startStarAnimations(this)
     }
     
     private fun setupToolbar() {

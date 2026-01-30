@@ -45,6 +45,18 @@ proguard/
 # Log Files
 *.log
 
+# Large build debug files
+build_debug*.txt
+build_error*.txt
+build_kotlin*.txt
+build_log*.txt
+build_result*.txt
+build_verify*.txt
+build_resources*.txt
+
+# Large audio files (exceeds GitHub 100MB limit)
+app/src/main/res/raw/*.mp3
+
 # Android Studio Navigation editor temp files
 .navigation/
 

@@ -4,8 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
+    android:background="@drawable/bg_little_prince"
     tools:context=".ui.alarm.AlarmRingActivity">
+
+    <!-- ULTRA MEGA PREMIUM Floating Stars (20 stars) - Layered BEHIND content -->
+    <include layout="@layout/layout_starry_background" />
 
     <TextView
         android:id="@+id/alarmNameText"
@@ -82,22 +85,23 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/dismissButton"
+        style="@style/Widget.ZzzTimerPro.Button.Primary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:padding="16dp"
         android:text="@string/dismiss_alarm"
-        android:textSize="18sp"
         app:backgroundTint="?attr/colorSecondary"
-        app:cornerRadius="12dp"
+        app:cornerRadius="16dp"
         app:layout_constraintBottom_toTopOf="@id/snoozeButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/snoozeButton"
+        style="@style/Widget.ZzzTimerPro.Button.Pill"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -105,9 +109,7 @@
         android:layout_marginBottom="32dp"
         android:padding="16dp"
         android:text="@string/snooze_alarm"
-        android:textSize="18sp"
-        app:backgroundTint="?attr/colorSurfaceVariant"
-        app:cornerRadius="12dp"
+        app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

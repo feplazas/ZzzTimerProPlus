@@ -1,30 +1,129 @@
-# Store Listing: Zzz Timer Pro+
+# Zzz Timer Pro+ - Google Play Store Listing
 
-## Short Description (80 chars)
-Premium Sleep Timer, Alarm & Sleep Tracker with immersive starry themes. 
-(72 chars)
+## App Information
 
-## Full Description
-**Zzz Timer Pro+** is the ultimate sleep companion, combining a powerful timer, intelligent alarm, and sleep tracking into one stunning, premium experience.
+**Package Name:** com.felipeplazas.zzztimerpro  
+**Category:** Health & Fitness / Sleep  
+**Content Rating:** Everyone  
+**Price:** Free  
 
-**✨ Key Features:**
+---
 
-🌌 **Immersive Starry Sky**
-Relax before bed with our signature "Planet B-612" animated background. A soothing, battery-efficient visual experience that calms the mind.
+## Short Description (80 characters max)
 
-⏱️ **Premium Timer**
-A massive, intuitive golden dial makes setting your sleep timer effortless. Perfect for naps, reading, or meditation.
+```
+Sleep peacefully with ambient sounds, breathing exercises & gentle timer fading
+```
 
-🎵 **Ambient Sounds**
-Drift off to high-quality loops: Soft Rain, Ocean Waves, White Noise, and more. Audio fades out gently as the timer ends.
+---
 
-📊 **Sleep Statistics**
-Track your usage efficiently. Dark, easy-to-read charts show you your sleep routines without blinding you at night.
+## Full Description (4000 characters max)
 
-🔔 **Reliable Alarms**
-Wake up gently but reliably.
+```
+🌙 Zzz Timer Pro+ — Your Premium Sleep Companion
 
-**🔒 Privacy First**
-We respect your data. All sleep analysis is performed locally on your device.
+Fall asleep peacefully with Zzz Timer Pro+, the beautifully designed sleep timer app inspired by The Little Prince. Create the perfect bedtime atmosphere with soothing ambient sounds that gently fade as you drift off to sleep.
 
-Download **Zzz Timer Pro+** today and transform your night routine.
+✨ KEY FEATURES
+
+⏰ Smart Sleep Timer
+• Set any duration from 5 minutes to 2 hours
+• Smooth logarithmic volume fade for natural transitions
+• Continues running even when your screen is off
+• Wake up refreshed without sudden audio stops
+
+🎵 Premium Ambient Sounds
+• Soft Rain — Gentle rainfall for relaxation
+• Ocean Waves — Calming seaside ambiance
+• Forest Night — Peaceful nocturnal nature sounds
+• White Noise — Consistent sound for focus and sleep
+• Campfire — Cozy crackling fire atmosphere
+
+🫁 Guided Breathing Exercises
+• 4-7-8 Relaxation — Clinically proven sleep technique
+• Box Breathing — Perfect for stress relief
+• Deep Relaxation — Slow, calming breaths
+• CPAP Adaptation — Special exercises for therapy users
+
+📊 Sleep Statistics
+• Track your sleep timer usage
+• View weekly and monthly patterns
+• Export your data for personal analysis
+
+🌟 PREMIUM DESIGN
+• Stunning Little Prince-inspired theme
+• Animated starry night background
+• Planet-shaped control icons
+• Smooth premium animations throughout
+
+😴 CPAP/BPAP THERAPY SUPPORT
+• Designed with sleep apnea users in mind
+• Mask adaptation breathing exercises
+• Customizable maintenance reminders
+• Filter and equipment replacement alerts
+
+🔒 PRIVACY FOCUSED
+• Works completely offline
+• No data collection or tracking
+• No advertisements
+• Your data stays on your device
+
+Perfect for:
+• Falling asleep faster
+• Meditation and relaxation
+• CPAP therapy adaptation
+• Creating calm study environments
+• Soothing babies and children
+
+Download Zzz Timer Pro+ and transform your bedtime routine into a peaceful journey to dreamland. Sweet dreams await! 🌙✨
+```
+
+---
+
+## What's New (Release Notes)
+
+```
+Version 1.1.0 — Premium Experience Update
+
+🪐 New Features:
+• Beautiful planet-shaped icons (Little Prince style)
+• Ultra smooth pulsating timer animation
+• CPAP/BPAP therapy support with reminders
+• Premium About section in Settings
+
+🎨 Design Improvements:
+• Refined UI across all screens
+• Enhanced haptic feedback
+• Improved button styling
+
+🛠️ Quality:
+• Performance optimizations
+• Bug fixes and stability improvements
+```
+
+---
+
+## Graphics Requirements
+
+| Asset | Size | Status |
+|-------|------|--------|
+| App Icon | 512x512 PNG | ✅ Ready |
+| Feature Graphic | 1024x500 PNG | ✅ Ready |
+| Phone Screenshots | 1080x1920 min | 📝 Create from device |
+| Tablet Screenshots | 1200x1920 min | 📝 Optional |
+
+---
+
+## Privacy Policy URL
+
+```
+https://[your-github-username].github.io/ZzzTimerProPlus/
+```
+
+---
+
+## Contact Email
+
+```
+felipeplazas.dev@gmail.com
+```

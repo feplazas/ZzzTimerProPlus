@@ -8,6 +8,9 @@
     android:background="@drawable/bg_little_prince"
     tools:context=".ui.statistics.StatisticsActivity">
 
+    <!-- ULTRA MEGA PREMIUM Floating Stars (20 stars) - Layered BEHIND content -->
+    <include layout="@layout/layout_starry_background" />
+
     <!-- App Bar -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -44,11 +47,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="#CC0F172A"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 app:strokeWidth="1dp"
-                app:strokeColor="#40FFFFFF">
+                app:strokeColor="?attr/colorOutlineVariant">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -62,7 +65,7 @@
                         android:text="@string/weekly_usage"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#FFD700"
+                        android:textColor="?attr/colorOnSurface"
                         android:layout_marginBottom="16dp" />
 
                     <com.github.mikephil.charting.charts.BarChart
@@ -93,9 +96,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginEnd="6dp"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp"
-                        app:cardBackgroundColor="#CC0F172A">
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="?attr/colorOutlineVariant"
+                        app:cardBackgroundColor="?attr/colorSurface">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -109,7 +114,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/total_usage_time"
                                 android:textSize="12sp"
-                                android:textColor="#B3FFFFFF"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textAlignment="center"
                                 android:layout_marginBottom="8dp" />
 
@@ -119,7 +124,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                android:textColor="#FFD700"
+                                android:textColor="?attr/colorPrimary"
                                 tools:text="12h" />
 
                         </LinearLayout>
@@ -132,9 +137,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginStart="6dp"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp"
-                        app:cardBackgroundColor="#CC0F172A">
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="?attr/colorOutlineVariant"
+                        app:cardBackgroundColor="?attr/colorSurface">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -148,7 +155,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/sessions_completed"
                                 android:textSize="12sp"
-                                android:textColor="#B3FFFFFF"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textAlignment="center"
                                 android:layout_marginBottom="8dp" />
 
@@ -158,7 +165,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                android:textColor="#FFD700"
+                                android:textColor="?attr/colorPrimary"
                                 tools:text="24" />
 
                         </LinearLayout>
@@ -180,9 +187,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginEnd="6dp"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp"
-                        app:cardBackgroundColor="#CC0F172A">
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="?attr/colorOutlineVariant"
+                        app:cardBackgroundColor="?attr/colorSurface">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -196,7 +205,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/average_duration"
                                 android:textSize="12sp"
-                                android:textColor="#B3FFFFFF"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textAlignment="center"
                                 android:layout_marginBottom="8dp" />
 
@@ -206,7 +215,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                android:textColor="#FFD700"
+                                android:textColor="?attr/colorPrimary"
                                 tools:text="30m" />
 
                         </LinearLayout>
@@ -219,9 +228,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginStart="6dp"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="4dp"
-                        app:cardBackgroundColor="#CC0F172A">
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="?attr/colorOutlineVariant"
+                        app:cardBackgroundColor="?attr/colorSurface">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -235,7 +246,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/most_used_sound"
                                 android:textSize="12sp"
-                                android:textColor="#B3FFFFFF"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textAlignment="center"
                                 android:layout_marginBottom="8dp" />
 
@@ -245,7 +256,7 @@
                                 android:layout_height="wrap_content"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
-                                android:textColor="#FFD700"
+                                android:textColor="?attr/colorPrimary"
                                 android:textAlignment="center"
                                 tools:text="Rain" />
 
@@ -260,9 +271,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="4dp"
-                    app:cardBackgroundColor="#CC0F172A">
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="?attr/colorOutlineVariant"
+                    app:cardBackgroundColor="?attr/colorSurface">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -299,34 +312,25 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnExportData"
+                    style="@style/Widget.ZzzTimerPro.Button.Pill"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:background="@drawable/bg_btn_glass"
                     android:text="@string/export_data"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
                     android:layout_marginBottom="12dp"
-                    android:drawableStart="@drawable/ic_export"
-                    android:drawableTint="#FFFFFF"
-                    android:paddingHorizontal="24dp"
-                    android:gravity="center"
-                    android:stateListAnimator="@null" />
+                    app:icon="@drawable/ic_export"
+                    app:iconGravity="textStart" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnClearStatistics"
+                    style="@style/Widget.ZzzTimerPro.Button.Pill"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:background="@drawable/bg_btn_glass"
                     android:text="@string/clear_statistics"
-                    android:textColor="#FF6B6B"
-                    android:textSize="16sp"
-                    android:drawableStart="@drawable/ic_delete"
-                    android:drawableTint="#FF6B6B"
-                    android:paddingHorizontal="24dp"
-                    android:gravity="center"
-                    android:stateListAnimator="@null" />
+                    android:textColor="@color/status_error"
+                    app:icon="@drawable/ic_delete"
+                    app:iconTint="@color/status_error" />
 
             </LinearLayout>
 
@@ -334,4 +338,6 @@
 
     </androidx.core.widget.NestedScrollView>
 
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+

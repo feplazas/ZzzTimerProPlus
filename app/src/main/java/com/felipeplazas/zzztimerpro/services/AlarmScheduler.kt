@@ -187,22 +187,41 @@ class AlarmReceiver : BroadcastReceiver() {
     }
 
     private fun triggerAlarm(context: Context, alarmId: Long) {
-        val intent = Intent(context, com.felipeplazas.zzztimerpro.ui.alarm.AlarmRingActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            putExtra("ALARM_ID", alarmId)
-        }
-        context.startActivity(intent)
-        LogExt.logStructured(
-            tag = "ALM",
-            phase = "ALARM_TRIGGER",
-            event = "launch_activity",
-            metrics = mapOf("alarm_id" to alarmId)
-        )
+        // Fetch alarm data from DB first, then launch activity with full config
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val database = AppDatabase.getDatabase(context)
                 val dao = database.scheduledAlarmDao()
                 val alarm = dao.getAlarmById(alarmId)
+                
+                // Build intent with full alarm configuration
+                val intent = Intent(context, com.felipeplazas.zzztimerpro.ui.alarm.AlarmRingActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    putExtra("ALARM_ID", alarmId)
+                    // Pass full alarm configuration so AlarmRingActivity uses user settings
+                    alarm?.let {
+                        putExtra("ALARM_NAME", it.name)
+                        putExtra("MATH_CHALLENGE", it.mathChallengeEnabled)
+                        putExtra("VIBRATION", it.vibrationEnabled)
+                        putExtra("SOUND_RES_ID", it.soundResId ?: -1)
+                    }
+                }
+                
+                // Launch activity on Main thread
+                CoroutineScope(Dispatchers.Main).launch {
+                    context.startActivity(intent)
+                    LogExt.logStructured(
+                        tag = "ALM",
+                        phase = "ALARM_TRIGGER",
+                        event = "launch_activity",
+                        metrics = mapOf(
+                            "alarm_id" to alarmId,
+                            "has_config" to (alarm != null)
+                        )
+                    )
+                }
+                
+                // Reschedule if repeating
                 if (alarm != null && alarm.repeatDays.isNotEmpty()) {
                     AlarmScheduler(context).scheduleAlarm(alarm)
                     LogExt.logStructured(

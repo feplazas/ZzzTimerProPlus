@@ -22,6 +22,7 @@ class SleepTrackingActivity : BaseActivity() {
 
     private lateinit var binding: ActivitySleepTrackingBinding
     private lateinit var database: AppDatabase
+    private lateinit var repository: com.felipeplazas.zzztimerpro.data.repository.SleepTrackingRepository
     private var currentSessionId: Long? = null
     private var isTracking = false
 
@@ -35,12 +36,23 @@ class SleepTrackingActivity : BaseActivity() {
         setContentView(binding.root)
 
         database = AppDatabase.getDatabase(this)
+        repository = com.felipeplazas.zzztimerpro.data.repository.SleepTrackingRepository(database)
 
         setupToolbar()
         setupListeners()
         loadRecentSession()
         checkPermissions()
         checkAndRecoverInterruptedSessions()
+        com.felipeplazas.zzztimerpro.utils.StarAnimationHelper.startStarAnimations(this)
+    }
+    
+    override fun onResume() {
+        super.onResume()
+        // Aggregate any pending sessions when activity resumes
+        lifecycleScope.launch {
+            repository.aggregateAllPendingSessions()
+            loadRecentSession()
+        }
     }
 
     private fun setupToolbar() {
@@ -251,8 +263,8 @@ class SleepTrackingActivity : BaseActivity() {
                     // Save initial completion state
                     database.sleepSessionDao().updateSession(updatedSession)
                     
-                    // Perform full aggregation
-                    calculateAndSaveSessionStats(updatedSession)
+                    // Perform full aggregation using repository
+                    repository.aggregateSessionStats(sessionId)
                 }
             }
 
@@ -290,8 +302,8 @@ class SleepTrackingActivity : BaseActivity() {
                         // Save initial recovery state
                         dao.updateSession(updatedSession)
                         
-                        // Perform full aggregation using the new helper
-                        calculateAndSaveSessionStats(updatedSession)
+                        // Perform full aggregation using the repository (includes fallback logic)
+                        repository.aggregateSessionStats(updatedSession.id)
                     } else {
                         // Dead session with no data, delete it
                         dao.deleteSession(session)
@@ -306,61 +318,6 @@ class SleepTrackingActivity : BaseActivity() {
         }
     }
 
-    private suspend fun calculateAndSaveSessionStats(session: SleepSession) {
-        try {
-            val cycles = database.sleepCycleDao().getCyclesBySessionSync(session.id)
-            
-            var deepMillis = 0L
-            var lightMillis = 0L
-            var remMillis = 0L
-            var awakeMillis = 0L
-            
-            cycles.forEach { cycle ->
-                val duration = cycle.endTime - cycle.startTime
-                if (duration > 0) {
-                    when (cycle.phase) {
-                        com.felipeplazas.zzztimerpro.data.local.SleepPhase.DEEP -> deepMillis += duration
-                        com.felipeplazas.zzztimerpro.data.local.SleepPhase.LIGHT -> lightMillis += duration
-                        com.felipeplazas.zzztimerpro.data.local.SleepPhase.REM -> remMillis += duration
-                        com.felipeplazas.zzztimerpro.data.local.SleepPhase.AWAKE -> awakeMillis += duration
-                    }
-                }
-            }
-            
-            // Calculate totals in minutes
-            val deepMinutes = (deepMillis / 60000).toInt()
-            val lightMinutes = (lightMillis / 60000).toInt()
-            val remMinutes = (remMillis / 60000).toInt()
-            val awakeMinutes = (awakeMillis / 60000).toInt()
-            // Total duration based on wall clock time (Time in Bed)
-            val totalMinutes = if (session.endTime != null && session.startTime > 0) {
-                ((session.endTime - session.startTime) / 60000).toInt()
-            } else {
-                ((deepMillis + lightMillis + remMillis + awakeMillis) / 60000).toInt()
-            }
-
-            val finalSession = session.copy(
-                totalMinutes = totalMinutes,
-                deepSleepMinutes = deepMinutes,
-                lightSleepMinutes = lightMinutes,
-                remSleepMinutes = remMinutes,
-                awakeMinutes = awakeMinutes,
-                sleepScore = SleepScoreCalculator.calculateSleepScore(
-                    session.copy(
-                        totalMinutes = totalMinutes,
-                        deepSleepMinutes = deepMinutes,
-                        lightSleepMinutes = lightMinutes,
-                        remSleepMinutes = remMinutes,
-                        awakeMinutes = awakeMinutes
-                    )
-                )
-            )
-
-            database.sleepSessionDao().updateSession(finalSession)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
 
     private fun loadRecentSession() {
         lifecycleScope.launch {

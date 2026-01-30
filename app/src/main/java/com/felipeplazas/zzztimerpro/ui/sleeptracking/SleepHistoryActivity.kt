@@ -28,6 +28,9 @@ class SleepHistoryActivity : BaseActivity() {
         binding = ActivitySleepHistoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Start floating star animations
+        com.felipeplazas.zzztimerpro.utils.StarAnimationHelper.startStarAnimations(this)
+
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Sleep History"

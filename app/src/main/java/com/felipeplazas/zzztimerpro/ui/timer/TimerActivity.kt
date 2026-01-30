@@ -115,6 +115,16 @@ class TimerActivity : BaseActivity() {
         }
     }
     
+    override fun onStart() {
+        super.onStart()
+        // Apply star twinkle animations
+        com.felipeplazas.zzztimerpro.utils.StarAnimationHelper.startStarAnimations(this)
+        
+        // Apply ultra premium pulsating animation to timer circle
+        val pulseAnimation = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.anim_timer_pulse)
+        binding.frameTimerDisplay.startAnimation(pulseAnimation)
+    }
+    
     override fun onResume() {
         super.onResume()
         // Registrar el BroadcastReceiver para actualizaciones de audio

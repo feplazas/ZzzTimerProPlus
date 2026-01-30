@@ -13,41 +13,7 @@
     </item>
     
     <!-- Stars (Denser Starry Night) -->
-    <!-- Original Stars -->
-    <item android:drawable="@drawable/bg_star" android:top="50dp" android:left="30dp" android:width="24dp" android:height="24dp" />
-    <item android:drawable="@drawable/bg_star" android:top="120dp" android:right="50dp" android:width="16dp" android:height="16dp" />
-    <item android:drawable="@drawable/bg_star" android:top="200dp" android:left="80dp" android:width="20dp" android:height="20dp" />
-    <item android:drawable="@drawable/bg_star" android:top="300dp" android:right="30dp" android:width="18dp" android:height="18dp" />
-
-    <!-- Additional Stars (User Request: "More Stars") -->
-    <item android:drawable="@drawable/bg_star" android:top="20dp" android:left="150dp" android:width="12dp" android:height="12dp" />
-    <item android:drawable="@drawable/bg_star" android:top="80dp" android:left="250dp" android:width="14dp" android:height="14dp" />
-    <item android:drawable="@drawable/bg_star" android:top="160dp" android:right="120dp" android:width="10dp" android:height="10dp" />
-    <item android:drawable="@drawable/bg_star" android:top="250dp" android:left="40dp" android:width="15dp" android:height="15dp" />
-    <item android:drawable="@drawable/bg_star" android:top="350dp" android:right="80dp" android:width="22dp" android:height="22dp" />
-    <item android:drawable="@drawable/bg_star" android:top="450dp" android:left="180dp" android:width="18dp" android:height="18dp" />
-    <item android:drawable="@drawable/bg_star" android:top="550dp" android:right="40dp" android:width="12dp" android:height="12dp" />
-    <item android:drawable="@drawable/bg_star" android:top="600dp" android:left="60dp" android:width="16dp" android:height="16dp" />
-    <item android:drawable="@drawable/bg_star" android:top="15dp" android:right="15dp" android:width="14dp" android:height="14dp" />
-    <item android:drawable="@drawable/bg_star" android:top="400dp" android:left="280dp" android:width="10dp" android:height="10dp" />
-    <item android:drawable="@drawable/bg_star" android:top="500dp" android:right="200dp" android:width="20dp" android:height="20dp" />
-    
-    <!-- Even More Stars (User Request: "Everywhere") -->
-    <item android:drawable="@drawable/bg_star" android:top="45dp" android:left="200dp" android:width="8dp" android:height="8dp" />
-    <item android:drawable="@drawable/bg_star" android:top="95dp" android:right="180dp" android:width="11dp" android:height="11dp" />
-    <item android:drawable="@drawable/bg_star" android:top="320dp" android:left="120dp" android:width="9dp" android:height="9dp" />
-    <item android:drawable="@drawable/bg_star" android:top="410dp" android:right="50dp" android:width="13dp" android:height="13dp" />
-    <item android:drawable="@drawable/bg_star" android:top="580dp" android:left="220dp" android:width="8dp" android:height="8dp" />
-    <item android:drawable="@drawable/bg_star" android:top="650dp" android:right="150dp" android:width="12dp" android:height="12dp" />
-    <item android:drawable="@drawable/bg_star" android:top="700dp" android:left="30dp" android:width="14dp" android:height="14dp" />
-    <item android:drawable="@drawable/bg_star" android:top="10dp" android:left="50dp" android:width="10dp" android:height="10dp" />
-    <item android:drawable="@drawable/bg_star" android:bottom="250dp" android:right="100dp" android:width="16dp" android:height="16dp" />
-    <item android:drawable="@drawable/bg_star" android:bottom="400dp" android:left="90dp" android:width="12dp" android:height="12dp" />
-    
-    <!-- Bottom area stars -->
-    <item android:drawable="@drawable/bg_star" android:bottom="100dp" android:left="50dp" android:width="15dp" android:height="15dp" />
-    <item android:drawable="@drawable/bg_star" android:bottom="150dp" android:right="60dp" android:width="18dp" android:height="18dp" />
-    <item android:drawable="@drawable/bg_star" android:bottom="50dp" android:left="150dp" android:width="12dp" android:height="12dp" />
+    <!-- Static stars removed to ensure all visible stars are animated via layout inclusion -->
 
     <!-- Moon (Top Right) -->
     <item 

@@ -68,6 +68,7 @@ class AmbientSoundsActivity : BaseActivity() {
         setupNowPlayingControls()
         bindAudioService()
         registerPlaybackReceiver()
+        com.felipeplazas.zzztimerpro.utils.StarAnimationHelper.startStarAnimations(this)
     }
     
     private fun setupToolbar() {

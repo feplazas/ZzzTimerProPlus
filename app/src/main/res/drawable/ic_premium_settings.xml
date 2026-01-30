@@ -1,34 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-  <path
-      android:pathData="M54,54m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
-    <aapt:attr name="android:fillColor">
-      <gradient 
-          android:startX="54"
-          android:startY="6"
-          android:endX="54"
-          android:endY="102"
-          android:type="linear">
-        <item android:offset="0" android:color="#FFFFD700"/>
-        <item android:offset="1" android:color="#FFFFA000"/>
-      </gradient>
-    </aapt:attr>
-  </path>
-  <path
-      android:pathData="M54,54m-36,0a36,36 0,1 1,72 0a36,36 0,1 1,-72 0"
-      android:strokeWidth="2"
-      android:strokeColor="#B25D4037"/>
-      
-  <!-- Gear Teeth details stylized as sun rays/petals -->
-  <path
-      android:pathData="M54,18 L60,30 L72,30 L64,40 L68,52 L54,46 L40,52 L44,40 L36,30 L48,30 Z"
-      android:fillColor="#5D4037"/>
-      
-  <path
-      android:pathData="M54,54m-12,0a12,12 0,1 1,24 0a12,12 0,1 1,-24 0"
-      android:fillColor="#FFFFFFFF"/>
+    
+    <!-- Outer Soft Glow (Atmospheric) -->
+    <path
+        android:pathData="M54,54m-52,0a52,52 0,1 1,104 0a52,52 0,1 1,-104 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="52"
+                android:type="radial">
+                <item android:offset="0.75" android:color="#28DAA520"/>
+                <item android:offset="1" android:color="#00DAA520"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Planet Base (Asteroid B-612 Sandy/Golden) -->
+    <path
+        android:pathData="M54,54m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:startX="27"
+                android:startY="18"
+                android:endX="81"
+                android:endY="90"
+                android:type="linear">
+                <item android:offset="0" android:color="#FFF5E6C8"/>
+                <item android:offset="0.3" android:color="#FFE8C872"/>
+                <item android:offset="0.7" android:color="#FFDAA520"/>
+                <item android:offset="1" android:color="#FFB8860B"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Planet Surface Texture - Crater 1 -->
+    <path
+        android:pathData="M32,40m-7,0a7,5 0,1 1,14 0a7,5 0,1 1,-14 0"
+        android:fillColor="#25654321"/>
+    
+    <!-- Planet Surface Texture - Crater 2 -->
+    <path
+        android:pathData="M70,50m-5,0a5,4 0,1 1,10 0a5,4 0,1 1,-10 0"
+        android:fillColor="#20654321"/>
+    
+    <!-- Planet Surface Texture - Crater 3 -->
+    <path
+        android:pathData="M45,76m-9,0a9,6 0,1 1,18 0a9,6 0,1 1,-18 0"
+        android:fillColor="#18654321"/>
+
+    <!-- Tiny Volcano 1 (Little Prince signature) -->
+    <path
+        android:pathData="M22,65 L25,58 L28,65 Z"
+        android:fillColor="#20654321"/>
+    
+    <!-- Tiny Volcano 2 -->
+    <path
+        android:pathData="M80,70 L83,64 L86,70 Z"
+        android:fillColor="#18654321"/>
+    
+    <!-- Planet Highlight (3D Effect) -->
+    <path
+        android:pathData="M54,54m-42,0a42,42 0,1 1,84 0a42,42 0,1 1,-84 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:centerX="36"
+                android:centerY="32"
+                android:gradientRadius="50"
+                android:type="radial">
+                <item android:offset="0" android:color="#45FFFFFF"/>
+                <item android:offset="0.35" android:color="#00FFFFFF"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Gear Icon - Outer Gear Circle -->
+    <path
+        android:pathData="M54,54m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0"
+        android:fillColor="#5D3A1A"/>
+    
+    <!-- Gear Icon - Inner Circle (Cutout showing planet color) -->
+    <path
+        android:pathData="M54,54m-9,0a9,9 0,1 1,18 0a9,9 0,1 1,-18 0"
+        android:fillColor="#DAA520"/>
+    
+    <!-- Gear Teeth (8 teeth around) -->
+    <path
+        android:pathData="M54,29 L57,34 L51,34 Z"
+        android:fillColor="#5D3A1A"/>
+    <path
+        android:pathData="M54,79 L57,74 L51,74 Z"
+        android:fillColor="#5D3A1A"/>
+    <path
+        android:pathData="M29,54 L34,57 L34,51 Z"
+        android:fillColor="#5D3A1A"/>
+    <path
+        android:pathData="M79,54 L74,57 L74,51 Z"
+        android:fillColor="#5D3A1A"/>
+    <path
+        android:pathData="M36,36 L42,39 L39,42 Z"
+        android:fillColor="#5D3A1A"/>
+    <path
+        android:pathData="M72,72 L66,69 L69,66 Z"
+        android:fillColor="#5D3A1A"/>
+    <path
+        android:pathData="M36,72 L39,66 L42,69 Z"
+        android:fillColor="#5D3A1A"/>
+    <path
+        android:pathData="M72,36 L69,42 L66,39 Z"
+        android:fillColor="#5D3A1A"/>
+    
+    <!-- Gear Highlight -->
+    <path
+        android:pathData="M54,54m-22,0a22,22 0,0 1,44 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:centerX="45"
+                android:centerY="42"
+                android:gradientRadius="26"
+                android:type="radial">
+                <item android:offset="0" android:color="#20FFFFFF"/>
+                <item android:offset="0.5" android:color="#00FFFFFF"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+        
 </vector>

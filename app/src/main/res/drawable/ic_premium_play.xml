@@ -1,42 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aapt="http://schemas.android.com/aapt"
     android:width="120dp"
     android:height="120dp"
     android:viewportWidth="120"
     android:viewportHeight="120">
-  <!-- Outer Glow Ring -->
-  <path
-      android:pathData="M60,60m-58,0a58,58 0,1 1,116 0a58,58 0,1 1,-116 0">
-    <aapt:attr name="android:fillColor">
-      <gradient 
-          android:centerX="60"
-          android:centerY="60"
-          android:gradientRadius="58"
-          android:type="radial">
-        <item android:offset="0.8" android:color="#FFFFD700"/>
-        <item android:offset="1" android:color="#00FFD700"/>
-      </gradient>
-    </aapt:attr>
-  </path>
-  
-  <!-- Main Button Body -->
-  <path
-      android:pathData="M60,60m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
-    <aapt:attr name="android:fillColor">
-      <gradient 
-          android:startX="60"
-          android:startY="12"
-          android:endX="60"
-          android:endY="108"
-          android:type="linear">
-        <item android:offset="0" android:color="#FFFFE57F"/>
-        <item android:offset="1" android:color="#FFFFC107"/>
-      </gradient>
-    </aapt:attr>
-  </path>
-  
-  <!-- Play Icon (Cutout) -->
-  <path
-      android:pathData="M50,40 L80,60 L50,80 Z"
-      android:fillColor="#5D4037"/>
+    
+    <!-- Outer Soft Glow (Atmospheric) -->
+    <path
+        android:pathData="M60,60m-58,0a58,58 0,1 1,116 0a58,58 0,1 1,-116 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:centerX="60"
+                android:centerY="60"
+                android:gradientRadius="58"
+                android:type="radial">
+                <item android:offset="0.7" android:color="#30DAA520"/>
+                <item android:offset="1" android:color="#00DAA520"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Planet Base (Asteroid B-612 Sandy/Golden) -->
+    <path
+        android:pathData="M60,60m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:startX="30"
+                android:startY="20"
+                android:endX="90"
+                android:endY="100"
+                android:type="linear">
+                <item android:offset="0" android:color="#FFF5E6C8"/>
+                <item android:offset="0.3" android:color="#FFE8C872"/>
+                <item android:offset="0.7" android:color="#FFDAA520"/>
+                <item android:offset="1" android:color="#FFB8860B"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Planet Surface Texture - Crater 1 -->
+    <path
+        android:pathData="M35,45m-8,0a8,6 0,1 1,16 0a8,6 0,1 1,-16 0"
+        android:fillColor="#25654321"/>
+    
+    <!-- Planet Surface Texture - Crater 2 -->
+    <path
+        android:pathData="M78,55m-6,0a6,5 0,1 1,12 0a6,5 0,1 1,-12 0"
+        android:fillColor="#20654321"/>
+    
+    <!-- Planet Surface Texture - Crater 3 -->
+    <path
+        android:pathData="M50,85m-10,0a10,7 0,1 1,20 0a10,7 0,1 1,-20 0"
+        android:fillColor="#18654321"/>
+
+    <!-- Tiny Volcano 1 (Little Prince signature) -->
+    <path
+        android:pathData="M25,70 L29,62 L33,70 Z"
+        android:fillColor="#20654321"/>
+    
+    <!-- Tiny Volcano 2 -->
+    <path
+        android:pathData="M85,75 L88,69 L91,75 Z"
+        android:fillColor="#18654321"/>
+    
+    <!-- Planet Highlight (3D Effect) -->
+    <path
+        android:pathData="M60,60m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0">
+        <aapt:attr name="android:fillColor">
+            <gradient 
+                android:centerX="40"
+                android:centerY="35"
+                android:gradientRadius="55"
+                android:type="radial">
+                <item android:offset="0" android:color="#45FFFFFF"/>
+                <item android:offset="0.35" android:color="#00FFFFFF"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    
+    <!-- Play Icon - Rounded Triangle (Premium Style) -->
+    <path
+        android:pathData="M48,35 L82,60 L48,85 Q44,82 44,78 L44,42 Q44,38 48,35 Z"
+        android:fillColor="#5D3A1A"/>
+    
+    <!-- Play Icon Highlight -->
+    <path
+        android:pathData="M48,35 L72,50 Q56,55 44,50 L44,42 Q44,38 48,35 Z"
+        android:fillColor="#18FFFFFF"/>
+        
 </vector>

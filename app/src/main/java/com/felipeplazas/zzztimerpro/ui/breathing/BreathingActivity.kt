@@ -21,11 +21,15 @@ class BreathingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBreathingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        
+        // Start floating star animations
+        com.felipeplazas.zzztimerpro.utils.StarAnimationHelper.startStarAnimations(this)
 
         setupToolbar()
         setupTechniqueSelector()
         
         binding.startButton.setOnClickListener {
+            com.felipeplazas.zzztimerpro.utils.HapticHelper.confirm(it)
             if (isRunning) stopExercise() else startExercise()
         }
     }
@@ -40,10 +44,30 @@ class BreathingActivity : AppCompatActivity() {
     // No lottie setup needed
 
     private fun setupTechniqueSelector() {
-        binding.technique478.setOnClickListener { selectTechnique(BreathingTechnique.TECHNIQUE_478) }
-        binding.techniqueBox.setOnClickListener { selectTechnique(BreathingTechnique.BOX_BREATHING) }
-        binding.techniqueCalm.setOnClickListener { selectTechnique(BreathingTechnique.CALM_BREATHING) }
-        binding.techniqueEnergizing.setOnClickListener { selectTechnique(BreathingTechnique.ENERGIZING) }
+        binding.technique478.setOnClickListener { 
+            com.felipeplazas.zzztimerpro.utils.HapticHelper.lightTick(it)
+            selectTechnique(BreathingTechnique.TECHNIQUE_478)
+        }
+        binding.techniqueBox.setOnClickListener { 
+            com.felipeplazas.zzztimerpro.utils.HapticHelper.lightTick(it)
+            selectTechnique(BreathingTechnique.BOX_BREATHING)
+        }
+        binding.techniqueCalm.setOnClickListener { 
+            com.felipeplazas.zzztimerpro.utils.HapticHelper.lightTick(it)
+            selectTechnique(BreathingTechnique.CALM_BREATHING)
+        }
+        binding.techniqueEnergizing.setOnClickListener { 
+            com.felipeplazas.zzztimerpro.utils.HapticHelper.lightTick(it)
+            selectTechnique(BreathingTechnique.ENERGIZING)
+        }
+        binding.techniqueCpapAdapt.setOnClickListener { 
+            com.felipeplazas.zzztimerpro.utils.HapticHelper.lightTick(it)
+            selectTechnique(BreathingTechnique.CPAP_ADAPT)
+        }
+        binding.techniqueCpapResist.setOnClickListener { 
+            com.felipeplazas.zzztimerpro.utils.HapticHelper.lightTick(it)
+            selectTechnique(BreathingTechnique.CPAP_RESIST)
+        }
         selectTechnique(BreathingTechnique.TECHNIQUE_478)
     }
 
@@ -54,12 +78,16 @@ class BreathingActivity : AppCompatActivity() {
         binding.techniqueBox.strokeWidth = 0
         binding.techniqueCalm.strokeWidth = 0
         binding.techniqueEnergizing.strokeWidth = 0
+        binding.techniqueCpapAdapt.strokeWidth = 0
+        binding.techniqueCpapResist.strokeWidth = 0
 
         val selectedCard = when (technique) {
             BreathingTechnique.TECHNIQUE_478 -> binding.technique478
             BreathingTechnique.BOX_BREATHING -> binding.techniqueBox
             BreathingTechnique.CALM_BREATHING -> binding.techniqueCalm
             BreathingTechnique.ENERGIZING -> binding.techniqueEnergizing
+            BreathingTechnique.CPAP_ADAPT -> binding.techniqueCpapAdapt
+            BreathingTechnique.CPAP_RESIST -> binding.techniqueCpapResist
         }
         selectedCard.strokeWidth = 5
         selectedCard.strokeColor = getColor(R.color.primary_gold)
@@ -133,7 +161,8 @@ class BreathingActivity : AppCompatActivity() {
                     BreathingTechnique.BOX_BREATHING -> {
                         if (currentPhase == BreathingPhase.REST) cycleCompleted = true
                     }
-                    BreathingTechnique.CALM_BREATHING, BreathingTechnique.ENERGIZING -> {
+                    BreathingTechnique.CALM_BREATHING, BreathingTechnique.ENERGIZING,
+                    BreathingTechnique.CPAP_ADAPT, BreathingTechnique.CPAP_RESIST -> {
                         if (currentPhase == BreathingPhase.EXHALE) cycleCompleted = true
                     }
                 }
@@ -173,6 +202,19 @@ class BreathingActivity : AppCompatActivity() {
                 BreathingPhase.READY, BreathingPhase.EXHALE -> Pair(BreathingPhase.INHALE, 2)
                 BreathingPhase.INHALE -> Pair(BreathingPhase.EXHALE, 4)
                 else -> Pair(BreathingPhase.INHALE, 2)
+            }
+            // CPAP-specific techniques
+            BreathingTechnique.CPAP_ADAPT -> when (currentPhase) {
+                // Mask adaptation: Inhale 4s, Exhale 6s (matches CPAP pressure rhythm)
+                BreathingPhase.READY, BreathingPhase.EXHALE -> Pair(BreathingPhase.INHALE, 4)
+                BreathingPhase.INHALE -> Pair(BreathingPhase.EXHALE, 6)
+                else -> Pair(BreathingPhase.INHALE, 4)
+            }
+            BreathingTechnique.CPAP_RESIST -> when (currentPhase) {
+                // Resistance training: Deep inhale 5s, controlled exhale 5s
+                BreathingPhase.READY, BreathingPhase.EXHALE -> Pair(BreathingPhase.INHALE, 5)
+                BreathingPhase.INHALE -> Pair(BreathingPhase.EXHALE, 5)
+                else -> Pair(BreathingPhase.INHALE, 5)
             }
         }
     }
@@ -221,5 +263,9 @@ class BreathingActivity : AppCompatActivity() {
     }
 
     private enum class BreathingPhase { READY, INHALE, HOLD, EXHALE, REST }
-    private enum class BreathingTechnique { TECHNIQUE_478, BOX_BREATHING, CALM_BREATHING, ENERGIZING }
+    private enum class BreathingTechnique { 
+        TECHNIQUE_478, BOX_BREATHING, CALM_BREATHING, ENERGIZING,
+        CPAP_ADAPT, CPAP_RESIST
+    }
 }
+

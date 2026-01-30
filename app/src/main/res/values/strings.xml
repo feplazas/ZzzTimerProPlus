@@ -6,6 +6,7 @@
     
     <!-- Main Screen -->
     <string name="start_timer">Start Timer</string>
+    <string name="view_timer">View Timer</string>
     <string name="stop_timer">Stop Timer</string>
     <string name="pause_timer">Pause Timer</string>
     <string name="resume_timer">Resume Timer</string>
@@ -107,6 +108,10 @@
     <string name="version">Version</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_of_service">Terms of Service</string>
+    <string name="about_version">Version 1.1.0</string>
+    <string name="about_created_by">Created by</string>
+    <string name="about_creator_name">Felipe Plazas</string>
+    <string name="about_copyright">© 2026 All Rights Reserved</string>
     
     <!-- Theme Settings -->
     <string name="select_theme">Select Theme</string>
@@ -456,4 +461,35 @@
     
     <string name="vibration">Vibration</string>
     <string name="do_not_disturb">Do Not Disturb</string>
+    
+    <!-- CPAP/BPAP Therapy Support -->
+    <string name="cpap_therapy_settings">CPAP/BPAP Therapy</string>
+    <string name="cpap_user_toggle">I use CPAP/BPAP</string>
+    <string name="cpap_user_toggle_desc">Enable reminders for CPAP/BPAP equipment maintenance</string>
+    <string name="cpap_reminders">Maintenance Reminders</string>
+    <string name="cpap_reminder_mask_daily">Daily Mask Cleaning</string>
+    <string name="cpap_reminder_mask_daily_desc">Reminder to clean your mask cushion every morning</string>
+    <string name="cpap_reminder_tube_weekly">Weekly Tube &amp; Reservoir</string>
+    <string name="cpap_reminder_tube_weekly_desc">Reminder to clean tube and water reservoir weekly</string>
+    <string name="cpap_reminder_filter">Filter Replacement</string>
+    <string name="cpap_reminder_filter_desc">Reminder to replace filter (every 30 days)</string>
+    <string name="cpap_reminder_mask_replace">Mask Replacement</string>
+    <string name="cpap_reminder_mask_replace_desc">Reminder to replace mask (every 3–6 months)</string>
+    <string name="cpap_reminder_time">Reminder Time</string>
+    <string name="cpap_reminder_set">Reminder set for %1$s</string>
+    
+    <!-- CPAP Breathing Exercises -->
+    <string name="breathing_cpap_adapt">CPAP Mask Adaptation</string>
+    <string name="breathing_cpap_adapt_instructions">Practice breathing with your mask on. Inhale 4s, exhale 6s. Helps adjust to CPAP pressure.</string>
+    <string name="breathing_cpap_resist">Resistance Breathing</string>
+    <string name="breathing_cpap_resist_instructions">Inhale deeply 5s against slight pursed-lip resistance, exhale 5s. Strengthens respiratory muscles for CPAP therapy.</string>
+    <string name="cpap_category">CPAP Preparation</string>
+    
+    <!-- CPAP Notifications -->
+    <string name="notification_channel_cpap">CPAP Reminders</string>
+    <string name="notification_channel_cpap_desc">Reminders for CPAP equipment maintenance</string>
+    <string name="cpap_notification_mask_clean">Time to clean your CPAP mask</string>
+    <string name="cpap_notification_tube_clean">Time for weekly CPAP tube and reservoir cleaning</string>
+    <string name="cpap_notification_filter">Time to replace your CPAP filter</string>
+    <string name="cpap_notification_mask_replace">Consider replacing your CPAP mask for optimal therapy</string>
 </resources>

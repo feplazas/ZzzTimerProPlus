@@ -30,6 +30,8 @@ data class SleepSession(
     val awakeMinutes: Int? = null,
     val quality: String? = null, // "Excellent", "Good", "Fair", "Poor"
     val notes: String? = null,
-    val completed: Boolean = false
+    val completed: Boolean = false,
+    @ColumnInfo(name = "needs_aggregation", defaultValue = "1")
+    val needsAggregation: Boolean = true
 )
 

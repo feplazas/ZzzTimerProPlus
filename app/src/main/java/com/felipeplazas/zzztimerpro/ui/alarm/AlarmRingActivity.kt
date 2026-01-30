@@ -52,6 +52,9 @@ class AlarmRingActivity : AppCompatActivity() {
         binding = ActivityAlarmRingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Start floating star animations
+        com.felipeplazas.zzztimerpro.utils.StarAnimationHelper.startStarAnimations(this)
+
         // Get alarm data from intent
         alarmId = intent.getLongExtra("ALARM_ID", -1)
         alarmName = intent.getStringExtra("ALARM_NAME") ?: getString(R.string.alarm_time)

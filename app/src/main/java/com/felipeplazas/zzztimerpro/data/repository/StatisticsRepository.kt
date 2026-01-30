@@ -132,6 +132,7 @@ class StatisticsRepository(
     
     suspend fun clearAllStatistics() {
         dao.deleteAllSessions()
+        sleepDao.deleteAllSessions()
     }
     
     suspend fun exportData(): String {

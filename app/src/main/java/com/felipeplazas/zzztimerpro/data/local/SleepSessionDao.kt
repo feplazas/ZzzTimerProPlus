@@ -45,6 +45,9 @@ interface SleepSessionDao {
     @Transaction
     @Query("SELECT * FROM sleep_sessions WHERE id = :sessionId")
     suspend fun getSessionWithCycles(sessionId: Long): SessionWithCycles?
+    
+    @Query("SELECT * FROM sleep_sessions WHERE needs_aggregation = 1 AND completed = 1 ORDER BY start_time DESC")
+    suspend fun getSessionsNeedingAggregation(): List<SleepSession>
 }
 
 data class SessionWithCycles(

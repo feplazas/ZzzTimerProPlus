@@ -27,6 +27,9 @@ class SavedTimersActivity : AppCompatActivity() {
         binding = ActivitySavedTimersBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Start floating star animations
+        com.felipeplazas.zzztimerpro.utils.StarAnimationHelper.startStarAnimations(this)
+
         repository = SavedTimersRepository.getInstance(this)
 
         setupToolbar()

@@ -15,6 +15,13 @@ object SoundRepository {
                 audioResId = R.raw.soft_rain
             ),
             AmbientSound(
+                id = 2,
+                nameResId = R.string.sound_ocean_waves,
+                descriptionResId = R.string.desc_ocean_waves,
+                iconResId = R.drawable.ic_ocean, // Premium icon
+                audioResId = R.raw.ocean_waves
+            ),
+            AmbientSound(
                 id = 3,
                 nameResId = R.string.sound_night_forest,
                 descriptionResId = R.string.desc_night_forest,
@@ -34,6 +41,13 @@ object SoundRepository {
                 descriptionResId = R.string.desc_white_noise,
                 iconResId = R.drawable.ic_noise,
                 audioResId = R.raw.white_noise
+            ),
+            AmbientSound(
+                id = 6,
+                nameResId = R.string.sound_night_birds,
+                descriptionResId = R.string.desc_night_forest,
+                iconResId = R.drawable.ic_bird, // Premium icon
+                audioResId = R.raw.night_birds
             )
         )
     }
