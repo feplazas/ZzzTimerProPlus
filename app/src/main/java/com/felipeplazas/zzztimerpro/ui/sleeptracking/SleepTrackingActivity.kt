@@ -17,6 +17,11 @@ import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import android.widget.Toast
+import com.google.android.material.timepicker.MaterialTimePicker
+import com.google.android.material.timepicker.TimeFormat
+import java.util.Calendar
+import java.util.Locale
+import java.text.SimpleDateFormat
 
 class SleepTrackingActivity : BaseActivity() {
 
@@ -25,6 +30,12 @@ class SleepTrackingActivity : BaseActivity() {
     private lateinit var repository: com.felipeplazas.zzztimerpro.data.repository.SleepTrackingRepository
     private var currentSessionId: Long? = null
     private var isTracking = false
+    private var targetWakeTimeCal: Calendar = Calendar.getInstance().apply {
+        add(Calendar.HOUR_OF_DAY, 8) // Default 8 hours from now? Or simple 7 AM
+        set(Calendar.HOUR_OF_DAY, 7)
+        set(Calendar.MINUTE, 0)
+        set(Calendar.SECOND, 0)
+    }
 
     companion object {
         private const val PERMISSION_REQUEST_CODE = 123
@@ -75,6 +86,18 @@ class SleepTrackingActivity : BaseActivity() {
         binding.btnViewHistory.setOnClickListener {
             startActivity(Intent(this, SleepHistoryActivity::class.java))
         }
+
+        // Smart Wake Controls
+        binding.switchSmartWake.setOnCheckedChangeListener { _, isChecked ->
+            binding.layoutTargetTime.visibility = if (isChecked) android.view.View.VISIBLE else android.view.View.GONE
+        }
+
+        binding.tvTargetTime.setOnClickListener {
+            showTimePicker()
+        }
+        
+        // Initialize default time text
+        updateTargetTimeText()
     }
 
     private fun checkPermissions() {
@@ -234,6 +257,13 @@ class SleepTrackingActivity : BaseActivity() {
                 val intent = Intent(this@SleepTrackingActivity, SleepTrackingService::class.java).apply {
                     action = SleepTrackingService.ACTION_START_TRACKING
                     putExtra(SleepTrackingService.EXTRA_SESSION_ID, currentSessionId)
+                    
+                    if (binding.switchSmartWake.isChecked) {
+                        putExtra(SleepTrackingService.EXTRA_SMART_WAKE_ENABLED, true)
+                        // Recalculate target time to ensure it is in future
+                        updateTargetTimeCalFromUI() 
+                        putExtra(SleepTrackingService.EXTRA_TARGET_WAKE_TIME, targetWakeTimeCal.timeInMillis)
+                    }
                 }
                 startService(intent)
 
@@ -351,11 +381,60 @@ class SleepTrackingActivity : BaseActivity() {
         if (isTracking) {
             binding.btnStartStop.text = getString(R.string.stop_tracking)
             binding.tvTrackingStatus.text = getString(R.string.sleep_tracking_active)
-            binding.btnViewHistory.isEnabled = false // Disable history while tracking
+            binding.btnViewHistory.isEnabled = false
+            // Disable controls while tracking
+            binding.cardSmartWake.alpha = 0.5f
+            binding.switchSmartWake.isEnabled = false
+            binding.tvTargetTime.isEnabled = false
         } else {
             binding.btnStartStop.text = getString(R.string.start_tracking)
             binding.tvTrackingStatus.text = getString(R.string.sleep_tracking)
             binding.btnViewHistory.isEnabled = true
+            // Enable controls
+            binding.cardSmartWake.alpha = 1.0f
+            binding.switchSmartWake.isEnabled = true
+            binding.tvTargetTime.isEnabled = true
+        }
+    }
+
+    private fun showTimePicker() {
+        val picker = MaterialTimePicker.Builder()
+            .setTimeFormat(TimeFormat.CLOCK_12H)
+            .setHour(targetWakeTimeCal.get(Calendar.HOUR_OF_DAY))
+            .setMinute(targetWakeTimeCal.get(Calendar.MINUTE))
+            .setTitleText(getString(R.string.target_wake_time))
+            .build()
+
+        picker.addOnPositiveButtonClickListener {
+            targetWakeTimeCal.set(Calendar.HOUR_OF_DAY, picker.hour)
+            targetWakeTimeCal.set(Calendar.MINUTE, picker.minute)
+            targetWakeTimeCal.set(Calendar.SECOND, 0)
+            targetWakeTimeCal.set(Calendar.MILLISECOND, 0)
+            
+            updateTargetTimeText()
+        }
+
+        picker.show(supportFragmentManager, "smart_wake_time")
+    }
+
+    private fun updateTargetTimeText() {
+        val format = SimpleDateFormat("h:mm a", Locale.getDefault())
+        binding.tvTargetTime.text = format.format(targetWakeTimeCal.time)
+    }
+
+    private fun updateTargetTimeCalFromUI() {
+        // Ensure calendar is in the future
+        val now = Calendar.getInstance()
+        val currentHour = now.get(Calendar.HOUR_OF_DAY)
+        val selectedHour = targetWakeTimeCal.get(Calendar.HOUR_OF_DAY)
+        
+        // Reset to today
+        targetWakeTimeCal.set(Calendar.YEAR, now.get(Calendar.YEAR))
+        targetWakeTimeCal.set(Calendar.DAY_OF_YEAR, now.get(Calendar.DAY_OF_YEAR))
+
+        // If time has passed today, move to tomorrow
+        if (targetWakeTimeCal.before(now)) {
+            targetWakeTimeCal.add(Calendar.DAY_OF_YEAR, 1)
         }
     }
 }
