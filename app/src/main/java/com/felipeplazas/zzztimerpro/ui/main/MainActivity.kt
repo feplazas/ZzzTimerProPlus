@@ -257,10 +257,13 @@ class MainActivity : BaseActivity() {
 
     private fun stopTimerFromMain() {
         try {
-            val stopIntent = Intent(this, TimerService::class.java).apply {
-                action = TimerService.ACTION_STOP
+            // Check if service is actually running to avoid crashes or unnecessary intents
+            if (TimerService.isServiceRunning) {
+                val stopIntent = Intent(this, TimerService::class.java).apply {
+                    action = TimerService.ACTION_STOP
+                }
+                startService(stopIntent)
             }
-            startService(stopIntent)
             
             // Immediately hide status row for responsiveness
             binding.timerStatusRow.visibility = View.GONE
