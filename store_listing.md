@@ -83,22 +83,17 @@ Download Zzz Timer Pro+ and transform your bedtime routine into a peaceful journ
 ## What's New (Release Notes)
 
 ```
-Version 1.1.0 — Premium Experience Update
-
+Version 1.2.0 — The Little Prince Update 🌹🪐
+    
 🪐 New Features:
-• Beautiful planet-shaped icons (Little Prince style)
-• Ultra smooth pulsating timer animation
-• CPAP/BPAP therapy support with reminders
-• Premium About section in Settings
+• Ultra Premium Animated Background: Watch the Little Prince float on Asteroid B-612 among the stars!
+• New immersive "Paper Cutout" visual style
+• Enhanced star twinkle animations
 
-🎨 Design Improvements:
-• Refined UI across all screens
-• Enhanced haptic feedback
-• Improved button styling
-
-🛠️ Quality:
-• Performance optimizations
-• Bug fixes and stability improvements
+🛠️ Improvements:
+• Fixed issue with stopping timer from main screen
+• Improved app stability and performance
+• Optimized ambient sound transitions
 ```
 
 ---
