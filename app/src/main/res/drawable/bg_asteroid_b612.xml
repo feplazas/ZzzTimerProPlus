@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Asteroid B-612 Body (Golden/Orange) -->
+    <path
+        android:pathData="M100,100 m-80,0 a80,80 0,1,1 160,0 a80,80 0,1,1 -160,0">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="80"
+                android:centerY="60"
+                android:gradientRadius="160"
+                android:type="radial">
+                <item android:offset="0" android:color="#FFFDD835"/> <!-- Bright Gold sun-hit -->
+                <item android:offset="0.5" android:color="#FFFBC02D"/> <!-- Gold -->
+                <item android:offset="0.9" android:color="#FFF57F17"/> <!-- Darker Orange/Gold -->
+                <item android:offset="1" android:color="#FFE65100"/> <!-- Shadow edge -->
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Craters (Darker Orange spots) -->
+    <!-- Large Crater -->
+    <path
+        android:pathData="M130,80 m-15,0 a15,12 0,1,1 30,0 a15,12 0,1,1 -30,0"
+        android:fillColor="#40E65100"/>
+    <path
+        android:pathData="M130,80 m-12,0 a12,9 0,1,1 24,0 a12,9 0,1,1 -24,0"
+        android:fillColor="#20E65100"/>
+        
+    <!-- Medium Crater -->
+    <path
+        android:pathData="M60,120 m-10,0 a10,8 0,1,1 20,0 a10,8 0,1,1 -20,0"
+        android:fillColor="#40E65100"/>
+        
+    <!-- Small Crater -->
+    <path
+        android:pathData="M110,140 m-8,0 a8,6 0,1,1 16,0 a8,6 0,1,1 -16,0"
+        android:fillColor="#40E65100"/>
+
+    <!-- Volcano 1 (The active one) -->
+    <path
+        android:pathData="M50,70 L70,70 L60,50 Z"
+        android:fillColor="#E65100"/>
+    <!-- Volcano Mouth -->
+    <path
+        android:pathData="M60,50 m-5,0 a5,2 0,1,1 10,0 a5,2 0,1,1 -10,0"
+        android:fillColor="#3E2723"/>
+
+    <!-- Volcano 2 (Extinct) -->
+    <path
+        android:pathData="M90,55 L110,55 L100,40 Z"
+        android:fillColor="#EF6C00"/>
+        
+    <!-- Volcano 3 (Extinct) -->
+    <path
+        android:pathData="M140,110 L155,110 L147.5,95 Z"
+        android:fillColor="#EF6C00"/>
+        
+    <!-- Little Prince Scarf (Floating Red/Orange Ribbon) -->
+    <!-- Scarf Neck Part -->
+    <path
+        android:pathData="M95,35 Q100,40 105,35 L105,45 Q100,50 95,45 Z"
+        android:fillColor="#FF5722"/>
+    
+    <!-- Scarf Flowing Tail -->
+    <path
+        android:pathData="M95,40 C80,40 60,30 40,50 L45,60 C65,45 80,50 95,45 Z"
+        android:fillColor="#FF5722"/>
+    <path
+        android:pathData="M40,50 C30,60 20,55 10,65 L15,75 C25,65 35,70 45,60 Z"
+        android:fillColor="#F4511E"/>
+
+    <!-- Small texture dots -->
+    <path
+        android:pathData="M80,90 m-2,0 a2,2 0,1,1 4,0 a2,2 0,1,1 -4,0"
+        android:fillColor="#60E65100"/>
+    <path
+        android:pathData="M150,70 m-2,0 a2,2 0,1,1 4,0 a2,2 0,1,1 -4,0"
+        android:fillColor="#60E65100"/>
+    <path
+        android:pathData="M100,160 m-3,0 a3,3 0,1,1 6,0 a3,3 0,1,1 -6,0"
+        android:fillColor="#60E65100"/>
+
+</vector>

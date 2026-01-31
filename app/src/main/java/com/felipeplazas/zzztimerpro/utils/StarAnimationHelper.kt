@@ -56,7 +56,10 @@ object StarAnimationHelper {
             R.id.starFloat37 to R.anim.anim_star_float_slow,
             R.id.starFloat38 to R.anim.anim_star_float,
             R.id.starFloat39 to R.anim.anim_star_float_alt,
-            R.id.starFloat40 to R.anim.anim_star_float_slow
+            R.id.starFloat40 to R.anim.anim_star_float_slow,
+            
+            // Floating Planet B-612
+            R.id.planetB612 to R.anim.anim_planet_float
         )
         
         stars.forEach { (starId, animId) ->
