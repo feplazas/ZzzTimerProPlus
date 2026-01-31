@@ -1,163 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
-    android:width="200dp"
-    android:height="200dp"
-    android:viewportWidth="200"
-    android:viewportHeight="200">
-
-    <!-- ATMOSPHERE GLOW (Soft Outer Halo) -->
-    <path
-        android:pathData="M100,100 m-85,0 a85,85 0,1,1 170,0 a85,85 0,1,1 -170,0">
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:width="260dp" android:height="260dp" android:viewportWidth="260" android:viewportHeight="260">
+    <path android:pathData="M130,130 m-95,0 a95,95 0,1,1 190,0 a95,95 0,1,1 -190,0">
         <aapt:attr name="android:fillColor">
-            <gradient
-                android:centerX="80"
-                android:centerY="60"
-                android:gradientRadius="100"
-                android:type="radial">
-                <item android:offset="0" android:color="#00FFFFFF"/>
-                <item android:offset="0.8" android:color="#1AFFFFFF"/>
-                <item android:offset="1" android:color="#00FFFFFF"/>
+            <gradient android:centerX="130" android:centerY="130" android:gradientRadius="95" android:type="radial">
+                <item android:offset="0.8" android:color="#00FFFFFF"/>
+                <item android:offset="1" android:color="#20FFFFFF"/>
             </gradient>
         </aapt:attr>
     </path>
-
-    <!-- Asteroid B-612 Body (Premium Golden/Orange) -->
-    <path
-        android:pathData="M100,100 m-80,0 a80,80 0,1,1 160,0 a80,80 0,1,1 -160,0">
+    <path android:pathData="M130,130 m-80,0 a80,80 0,1,1 160,0 a80,80 0,1,1 -160,0">
         <aapt:attr name="android:fillColor">
-            <gradient
-                android:centerX="70"
-                android:centerY="50"
-                android:gradientRadius="180"
-                android:type="radial">
-                <item android:offset="0" android:color="#FFFFEB3B"/> <!-- Brighter Highlight -->
-                <item android:offset="0.4" android:color="#FFFDD835"/> <!-- Gold -->
-                <item android:offset="0.7" android:color="#FFF57F17"/> <!-- Deep Orange -->
-                <item android:offset="1" android:color="#FFE65100"/> <!-- Shadow -->
+            <gradient android:centerX="100" android:centerY="80" android:gradientRadius="180" android:type="radial">
+                <item android:offset="0" android:color="#FFF9C4"/>
+                <item android:offset="0.4" android:color="#FFF176"/>
+                <item android:offset="0.8" android:color="#FFB300"/>
+                <item android:offset="1" android:color="#F57F17"/>
             </gradient>
         </aapt:attr>
     </path>
-
-    <!-- CRATERS (Subtle Background Detail) -->
-    <path
-        android:pathData="M130,80 m-15,0 a15,12 0,1,1 30,0 a15,12 0,1,1 -30,0"
-        android:fillColor="#30E65100"/> 
-    <path
-        android:pathData="M130,80 m-12,0 a12,9 0,1,1 24,0 a12,9 0,1,1 -24,0"
-        android:fillColor="#20BF360C"/>
-
-    <path
-        android:pathData="M60,120 m-10,0 a10,8 0,1,1 20,0 a10,8 0,1,1 -20,0"
-        android:fillColor="#30E65100"/>
-        
-    <path
-        android:pathData="M110,140 m-8,0 a8,6 0,1,1 16,0 a8,6 0,1,1 -16,0"
-        android:fillColor="#30E65100"/>
-
-    <!-- THE LITTLE PRINCE (Sitting on top edge) -->
-    
-    <!-- Skin (Head) -->
-    <path
-        android:pathData="M90,45 m-12,0 a12,12 0,1,1 24,0 a12,12 0,1,1 -24,0"
-        android:fillColor="#FFE0B2"/> <!-- Peach skin -->
-
-    <!-- Hair (Spiky Gold) -->
-    <path
-        android:pathData="M78,40 C75,45 80,35 85,32 C90,28 95,30 100,32 C105,35 110,40 105,45 C105,38 100,35 90,35 C82,35 78,40 78,40 Z"
-        android:fillColor="#FFD54F"/>
-    <path
-        android:pathData="M88,32 L92,25 L96,32 Z" 
-        android:fillColor="#FFD54F"/> <!-- Top spike -->
-
-    <!-- Outfit (Green Jumpsuit) -->
-    <!-- Torso -->
-    <path
-        android:pathData="M85,55 L95,55 L100,85 L80,85 Z"
-        android:fillColor="#66BB6A"/> <!-- Green -->
-    <!-- Arms -->
-    <path
-        android:pathData="M85,60 L75,75"
-        android:strokeColor="#66BB6A"
-        android:strokeWidth="5"
-        android:strokeLineCap="round"/>
-    <path
-        android:pathData="M95,60 L105,75"
-        android:strokeColor="#66BB6A"
-        android:strokeWidth="5"
-        android:strokeLineCap="round"/>
-        
-    <!-- Legs (Sitting/Dangling) -->
-    <path
-        android:pathData="M85,85 L85,95 L95,95 L95,85 Z"
-        android:fillColor="#F5F5F5"/> <!-- Pants/White variant or Green -->
-     <path
-        android:pathData="M85,85 L80,105"
-        android:strokeColor="#66BB6A"
-        android:strokeWidth="6"
-        android:strokeLineCap="round"/>
-     <path
-        android:pathData="M95,85 L100,105"
-        android:strokeColor="#66BB6A"
-        android:strokeWidth="6"
-        android:strokeLineCap="round"/>
-        
-    <!-- Boots -->
-    <path
-        android:pathData="M78,105 L82,105 L82,110 L78,110 Z"
-        android:fillColor="#5D4037"/>
-    <path
-        android:pathData="M98,105 L102,105 L102,110 L98,110 Z"
-        android:fillColor="#5D4037"/>
-
-    <!-- Belt (Orange) -->
-    <path
-        android:pathData="M83,75 L97,75"
-        android:strokeColor="#FFA726"
-        android:strokeWidth="3"/>
-
-    <!-- Scarf (Iconic Flowing) -->
-    <!-- Neck wrap -->
-    <path
-        android:pathData="M85,55 L95,55"
-        android:strokeColor="#FF5722"
-        android:strokeWidth="4"
-        android:strokeLineCap="round"/>
-    <!-- Flowing Trail -->
-    <path
-        android:pathData="M95,55 C110,50 120,40 140,50 C160,60 170,40 180,45"
-        android:strokeColor="#FF5722"
-        android:strokeWidth="8"
-        android:strokeLineCap="round"/>
-    <!-- Inner bright line for scarf 3D effect -->
-    <path
-        android:pathData="M95,55 C110,50 120,40 140,50 C160,60 170,40 180,45"
-        android:strokeColor="#FF7043"
-        android:strokeWidth="3"
-        android:strokeLineCap="round"/>
-
-    <!-- THE ROSE (Next to him) -->
-    <!-- Stem -->
-    <path 
-        android:pathData="M60,60 Q55,50 58,45"
-        android:strokeColor="#4CAF50"
-        android:strokeWidth="2"
-        android:strokeLineCap="round"/>
-    <!-- Leaves -->
-    <path
-        android:pathData="M58,55 L53,53 M58,50 L63,48"
-        android:strokeColor="#4CAF50"
-        android:strokeWidth="1.5"
-        android:strokeLineCap="round"/>
-    <!-- Flower Head -->
-    <path
-        android:pathData="M58,45 m-4,0 a4,4 0,1,1 8,0 a4,4 0,1,1 -8,0"
-        android:fillColor="#E91E63"/>
-    <!-- Glass Globe (Dome) -->
-    <path
-        android:pathData="M58,60 m-10,0 a10,14 0,1,1 20,0 a10,14 0,1,1 -20,0"
-        android:fillColor="#20FFFFFF"
-        android:strokeColor="#60FFFFFF"
-        android:strokeWidth="1"/>
-
+    <path android:pathData="M160,100 m-12,0 a12,8 0,1,1 24,0 a12,8 0,1,1 -24,0" android:fillColor="#20000000"/>
+    <path android:pathData="M90,160 m-8,0 a8,5 0,1,1 16,0 a8,5 0,1,1 -16,0" android:fillColor="#20000000"/>
+    <path android:pathData="M180,140 m-5,0 a5,3 0,1,1 10,0 a5,3 0,1,1 -10,0" android:fillColor="#20000000"/>
+    <group>
+        <path android:pathData="M70,80 Q65,70 70,60" android:strokeColor="#4CAF50" android:strokeWidth="1.5" android:strokeLineCap="round"/>
+        <path android:pathData="M70,70 L65,68 M70,65 L75,63" android:strokeColor="#4CAF50" android:strokeWidth="1" android:strokeLineCap="round"/>
+        <path android:pathData="M70,60 m-3.5,0 a3.5,3.5 0,1,1 7,0 a3.5,3.5 0,1,1 -7,0" android:fillColor="#E91E63"/>
+        <path android:pathData="M70,60 m-2,0 a2,2 0,1,1 4,0 a2,2 0,1,1 -4,0" android:fillColor="#F48FB1"/>
+        <path android:pathData="M70,80 m-10,0 a10,14 0,1,1 20,0 a10,14 0,1,1 -20,0" android:fillColor="#15FFFFFF" android:strokeColor="#80FFFFFF" android:strokeWidth="0.8"/>
+        <path android:pathData="M74,60 Q76,64 76,70" android:strokeColor="#90FFFFFF" android:strokeWidth="1" android:strokeLineCap="round"/>
+    </group>
+    <group android:pivotX="130" android:pivotY="130" android:rotation="-5">
+        <path android:pathData="M125,55 C140,50 160,35 180,45 C190,50 185,60 175,55 C160,45 145,55 125,60 Z" android:fillColor="#FF5722"/>
+        <path android:pathData="M115,105 L115,115 L108,115 L108,105 Z" android:fillColor="#3E2723"/>
+        <path android:pathData="M135,105 L135,115 L142,115 L142,105 Z" android:fillColor="#3E2723"/>
+        <path android:pathData="M110,80 L115,105 L125,90 L135,105 L140,80 Z" android:fillColor="#ECEFF1"/>
+        <path android:pathData="M110,85 L105,60 L145,60 L140,85 L125,85 L125,85 Z" android:fillColor="#66BB6A"/>
+        <path android:pathData="M105,80 Q90,90 95,100 L110,85" android:fillColor="#43A047"/>
+        <path android:pathData="M145,80 Q160,90 155,100 L140,85" android:fillColor="#66BB6A"/>
+        <path android:pathData="M110,80 L140,80 L140,85 L110,85 Z" android:fillColor="#FFC107"/>
+        <path android:pathData="M122,55 L128,55 L128,60 L122,60 Z" android:fillColor="#FFE0B2"/>
+        <path android:pathData="M125,48 m-9,0 a9,9 0,1,1 18,0 a9,9 0,1,1 -18,0" android:fillColor="#FFE0B2"/>
+        <path android:pathData="M122,46 m-1,0 a1,1 0,1,1 2,0 a1,1 0,1,1 -2,0" android:fillColor="#000000"/>
+        <path android:pathData="M128,46 m-1,0 a1,1 0,1,1 2,0 a1,1 0,1,1 -2,0" android:fillColor="#000000"/>
+        <path android:pathData="M120,50 m-1.5,0 a1.5,1 0,1,1 3,0 a1.5,1 0,1,1 -3,0" android:fillColor="#FFCC80"/>
+        <path android:pathData="M130,50 m-1.5,0 a1.5,1 0,1,1 3,0 a1.5,1 0,1,1 -3,0" android:fillColor="#FFCC80"/>
+        <path android:pathData="M115,45 Q110,50 112,55 L138,55 Q140,50 135,45 Z" android:fillColor="#FFB300"/>
+        <path android:pathData="M116,42 L112,35 L120,40" android:fillColor="#FFCA28"/>
+        <path android:pathData="M120,40 L125,32 L130,40" android:fillColor="#FFCA28"/>
+        <path android:pathData="M130,40 L138,35 L134,42" android:fillColor="#FFCA28"/>
+        <path android:pathData="M116,42 Q125,48 134,42" android:fillColor="#FFCA28"/>
+        <path android:pathData="M120,58 L130,58 L125,65 Z" android:fillColor="#F4511E"/>
+        <path android:pathData="M118,55 Q125,60 132,55" android:strokeColor="#FF5722" android:strokeWidth="3" android:strokeLineCap="round"/>
+        <path android:pathData="M110,62 L105,75" android:strokeColor="#66BB6A" android:strokeWidth="4" android:strokeLineCap="round"/>
+        <path android:pathData="M140,62 L150,70" android:strokeColor="#66BB6A" android:strokeWidth="4" android:strokeLineCap="round"/>
+        <path android:pathData="M105,75 m-2,0 a2,2 0,1,1 4,0 a2,2 0,1,1 -4,0" android:fillColor="#FFE0B2"/>
+        <path android:pathData="M150,70 m-2,0 a2,2 0,1,1 4,0 a2,2 0,1,1 -4,0" android:fillColor="#FFE0B2"/>
+    </group>
+    <path android:pathData="M50,40 L52,45 L57,47 L52,49 L50,54 L48,49 L43,47 L48,45 Z" android:fillColor="#FFFFFF"/>
+    <path android:pathData="M200,60 L201,63 L204,64 L201,65 L200,68 L199,65 L196,64 L199,63 Z" android:fillColor="#FFFFFF"/>
 </vector>
