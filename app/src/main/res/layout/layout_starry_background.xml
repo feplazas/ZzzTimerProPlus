@@ -5,12 +5,12 @@
 
     <!-- ULTRA MEGA PREMIUM UNIVERSAL STAR FIELD (20 Stars) -->
     
-    <!-- FLOATING ASTEROID B-612 (User Image) -->
+    <!-- FLOATING ASTEROID B-612 (User Image - Clean) -->
     <ImageView 
         android:id="@+id/planetB612" 
         android:layout_width="180dp" 
         android:layout_height="180dp" 
-        android:src="@drawable/bg_asteroid_b612_raster" 
+        android:src="@drawable/bg_asteroid_b612" 
         android:alpha="0.9" 
         android:layout_gravity="top|start" 
         android:layout_marginTop="120dp" 
